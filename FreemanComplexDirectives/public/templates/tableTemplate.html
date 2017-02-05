@@ -1,0 +1,17 @@
+<p>This is the list from the tableTemplate file</p>
+<!--<ul>
+    <li ng-repeat="item in data">{{item.price | currency}}</li>
+</ul>-->
+
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in data">
+        <td>{{item.price | currency}}</td>
+    </tr>
+    </tbody>
+</table>

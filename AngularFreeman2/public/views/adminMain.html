@@ -1,0 +1,25 @@
+<div class="panel panel-default row" ng-controller="mainCtrl as main">
+    <div class="col-xs-3 panel-body">
+        <a ng-repeat="item in main.screens" class="btn btn-block btn-default"
+           ng-class="{'btn-primary': item == main.current }" ng-click="main.setScreen($index)">
+            {{item}}
+        </a>
+    </div>
+    <div class="col-xs-8 panel-body">
+        <div ng-include="main.getScreen()"></div>
+    </div>
+</div>
+
+<!--<div class="row">
+<div class="col-sm-3">
+    <button class="btn btn-block btn-primary">Products</button>
+    <button class="btn btn-block btn-default">Products</button>
+</div>
+
+<div class="col-sm-8">
+    <div class="well">
+        This is the main view
+    </div>
+</div>
+</div>-->
+

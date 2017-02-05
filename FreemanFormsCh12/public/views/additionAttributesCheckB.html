@@ -1,0 +1,16 @@
+<div class="panel" id="todoPanel" ng-controller="additionAttributesCheckBCtrl as c">
+    <form name="donForm" novalidate>
+        <div class="well">
+            <div class="checkbox">
+                <label>
+                    <input name="sample" type="checkbox" ng-model="inputValue" ng-true-value="'Hurrah'"
+                           ng-false-value="'Boo'">
+                    This is a checkbox
+                </label>
+            </div>
+        </div>
+        <div class="well">
+            <p>Model Value: {{inputValue}}</p>
+        </div>
+    </form>
+</div>

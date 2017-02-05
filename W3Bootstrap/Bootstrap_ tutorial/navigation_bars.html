@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <title>Navigation Bars</title>
+</head>
+<body>
+<div class="container">
+    <h1>Bootstrap Navigation Bar</h1>
+    <h2>Navigation Bars</h2>
+    <p>A navigation bar is a navigation header that is placed at the top of the page:</p>
+    <p>With Bootstrap, a navigation bar can extend or collapse, depending on the screen size. A standard navigation bar
+        is created with <code>&lt;nav class="navbar navbar-default"&gt;</code>. The following example shows how to add a
+        navigation bar to the top of the page:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <nav class="navbar navbar-default">
+                <!--  <div class="container-fluid">-->
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand">WebSiteName</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>
+                </ul>
+                <!--   </div>-->
+            </nav>
+        </div>
+    </div>
+    <p class="don-note">
+        All of the examples on this page will show a navigation bar that takes up too much space on small screens
+        (however, the navigation bar will be on one single line on large screens - because Bootstrap is responsive).
+        This problem (with the small screens) will be solved in the last example on this page. </p>
+    <hr>
+    <h2>Inverted Navigation Bar</h2>
+    <p>If you don't like the style of the default navigation bar, Bootstrap provides an alternative, black navbar. Just
+        change the <code>.navbar-default</code> class into <code>.navbar-inverse</code>:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <nav class="navbar navbar-inverse">
+                <!--  <div class="container-fluid">-->
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand">WebSiteName</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>
+                </ul>
+                <!--   </div>-->
+            </nav>
+        </div>
+    </div>
+    <hr>
+    <h2>Fixed Navigation Bar</h2>
+    <p>The navigation bar can also be fixed at the top or at the bottom of the page. A fixed navigation bar stays
+        visible in a fixed position (top or bottom) independent of the page scroll. The <code>.navbar-fixed-top</code>
+        class makes the navigation bar fixed at the top:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            Navbar-fixed-top not working within panel.
+        </div>
+    </div>
+    <hr>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            Navbar-fixed-bottom not working within panel.
+        </div>
+    </div>
+    <hr>
+    <h2>Navigation Bar With Dropdown</h2>
+    <p>Navigation bars can also hold dropdown menus. The following example adds a dropdown menu for the "Page 1"
+        button:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <nav class="navbar navbar-inverse">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand">WebSiteName</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page 1 <span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Page 1-1</a></li>
+                            <li><a href="#">Page 1-2</a></li>
+                            <li><a href="#">Page 1-3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <hr>
+    <h2>Right-Aligned Navigation Bar</h2>
+    <p>The <code>.navbar-right</code> class is used to right-align navigation bar buttons. In the following example we
+        insert a "Sign Up" button and a "Login" button to the right in the navigation bar. We also add a glyphicon on
+        each of the two new buttons:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <nav class="navbar navbar-inverse">
+                <div class="navbar-header">
+                    <div class="navbar-brand" href="#">WebSiteName</div>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"> Sign Up</span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"> Login</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <hr>
+    <h2>Collapsing The Navigation Bar</h2>
+    <p>The navigation bar takes up too much space on a small screen. We should hide the navigation bar; and only show it
+        when it is needed. In the following example the navigation bar is replaced by a button in the top right corner.
+        Only when the button is clicked, the navigation bar will be displayed: </p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <nav class="navbar navbar-inverse">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">WebSiteName</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Page 1</a></li>
+                        <li><a href="#">Page 2</a></li>
+                        <li><a href="#">Page 3</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"> Sign Up</span></a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"> Login</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+</body>
+</html>

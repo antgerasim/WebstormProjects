@@ -1,0 +1,43 @@
+<script type="text/ng-template" id="triTemplate">
+    <div class="well">
+        <div class="btn-group">
+            <button class="btn btn-default">Yes</button>
+            <button class="btn btn-default">No</button>
+            <button class="btn btn-default">Not Sure</button>
+        </div>
+    </div>
+</script>
+<h2>Handling External Changes</h2>
+<div ng-controller="defaultCtrl2">
+    <div>
+        <tri-button2 ng-model="dataValue"/>
+    </div>
+    <div class="well">
+        Value:
+        <select ng-model="dataValue">
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+        </select>
+    </div>
+</div>
+
+<p>Look at triButtonChangesDir.js</p>
+<p>When changing the Select box, the buttons are switching but pressing on the buttons doesnt change the select</p>
+<p>Added functionality - when the 'dataValue' property is modified outside of my directive - though the select element,
+    the highlighted button is
+    changed. </p>
+
+<p>ctrl.$render = function () {
+    setSelected(ctrl.$viewValue || &quot;Not Sure&quot;);
+    }</p>
+
+<p>The $render function, defined by the ngModel controller was replaced with one that calls my setSelected
+    function. </p>
+<p>The $render method is called by the ng-model directive when the value has been modified outside the directive and the
+    display needs to be updated. Get the new value by reading the $viewValue property.</p>
+
+<p>The explicit call to setSelected was removed. The ngModel controller will call the $render function when the
+    application first starts so that you can set the initial state of your directive. </p>
+<p>The value of the $viewValue will be undefined if you're using dynamically defined properties, and that's why it is
+    good practice to provide a fallback value, which was done in the listing</p>

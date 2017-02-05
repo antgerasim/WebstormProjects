@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$/AFreemanJavascriptPrimer/jsdemo.html" libraries="{ECMAScript 6}" />
+    <file url="file://$PROJECT_DIR$/AFreemanOrigCode/controllers/productListControllers.js" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/AFreemanOrigCode/controllers/sportsStore.js" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/AFreemanOrigCode/filters/customFilters.js" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/AFreemanOrigCode/index.html" libraries="{angularjs-DefinitelyTyped}" />
+  </component>
+</project>

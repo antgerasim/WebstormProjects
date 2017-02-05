@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="donXampleApp">
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <!--    <script src="components/tapDir.js"></script>-->
+    <script>
+        angular.module('donXampleApp', ['ngRoute', 'tap'])
+                .config(function ($routeProvider) {
+                    $routeProvider
+                            .when('/training', {
+                                templateUrl: '/views/training.html'
+                            })
+                            .when('/showhideremoveelems', {
+                                templateUrl: '/views/showHideRemoveElems.html'
+                            })
+                            .when('/ngclassngstyledirs', {
+                                templateUrl: '/views/ngClassNgStyleDirs.html'
+                            })
+                            .when('/filtertoresolvtransclusionprobs', {
+                                templateUrl: '/views/filterToResolvTransclusionProbs.html'
+                            })
+                            .when('/ngclassoddngclassevendirs', {
+                                templateUrl: '/views/ngClassOddNgClassEvenDirs.html'
+                            })
+                            .when('/directivestohandleevents', {
+                                templateUrl: '/views/directivestohandleevents.html'
+                            })
+                            .when('/customeventdirective', {
+                                templateUrl: '/views/customEventDirective.html'
+                            })
+                            .when('/booleanattributesindirectives',{
+                                templateUrl:'/views/booleanAttributesInDirectives.html'
+                            })
+                            .otherwise({
+                                templateUrl: '/views/start.html'
+                            });
+                });
+    </script>
+    <script src="controller/defaultCtrl.js"></script>
+    <script src="controller/directiveCtrl.js"></script>
+    <script src="components/tapDir.js"></script>
+</head>
+<body>
+<!--<h1>Directive Test</h1>-->
+
+<div ng-view></div>
+</body>
+</html>
+<!--
+279-->

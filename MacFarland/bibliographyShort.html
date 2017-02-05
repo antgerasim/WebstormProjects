@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Don Title</title>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/site.css">
+    <script>
+        $(function(){
+            $('.main a[href^="http://"]').each(function(){
+                var extLink = $(this).attr('href');
+                $('#bibList').append('<li>' + extLink + '</li>').css('nav li');
+            });//end each
+        });//end ready
+    </script>
+</head>
+<body>
+<div id="bibliography">
+    <h3>Web pages referenced in this article</h3>
+    <ul id="bibList">
+    </ul>
+</div>
+<div class="content">
+    <div class="main">
+        <h1>A Dynamically Created Bibliography</h1>
+        <p>Throughout history, there have been many fantastic Web sites. <a href="http://www.yahoo.com/">Yahoo!</a> comes to mind, as does <a href="http://www.google.com/">Google</a>. And few will forget the culture-shaping influence of <a href="http://www.hampsterdance.com/">Hampster Dance</a>.</p>
+    </div>
+    <footer class="">
+        <p>JavaScript &amp; jQuery: The Missing Manual, 3rd Edition, by <a href="http://sawmac.com/">David McFarland</a>. Published by <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.</p>
+    </footer>
+</div>
+
+
+</body>
+</html>

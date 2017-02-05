@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Buttons</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <style>
+/*        .well{
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+        }*/
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Bootstrap Buttons</h1>
+    <h2>Button Styles</h2>
+    <p>Bootstrap provides seven styles of buttons:</p>
+    <ul>
+        <li><code>.btn-default</code></li>
+        <li><code>.btn-primary</code></li>
+        <li><code>.btn-success</code></li>
+        <li><code>.btn-info</code></li>
+        <li><code>.btn-warning</code></li>
+        <li><code>.btn-danger</code></li>
+        <li><code>.btn-link</code></li>
+    </ul>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <button class="btn btn-default">Default</button>
+            <button class="btn btn-primary">Primary</button>
+            <button class="btn btn-success">Success</button>
+            <button class="btn btn-info">Info</button>
+            <button class="btn btn-warning">Warning</button>
+            <button class="btn btn-danger">Danger</button>
+            <button class="btn btn-link">Link</button>
+        </div>
+    </div>
+    <hr>
+    <p>The button classes can be used on an &lt;a&gt;, &lt;button&gt;, or &lt;input&gt; element:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <a href="#" class="btn btn-info" role="button">Link Button</a>
+            <button type="button" class="btn btn-info">Button</button>
+            <input type="button" class="btn btn-info" value="Input Button">
+            <input type="submit" class="btn btn-info" value="Submit Button">
+        </div>
+    </div>
+    <hr>
+    <h2>Button Sizes</h2>
+    <p>Bootstrap provides four button sizes:</p>
+    <ul>
+        <li><code>.btn-lg</code></li>
+        <li><code>.btn-md</code></li>
+        <li><code>.btn-sm</code></li>
+        <li><code>.btn-xs</code></li>
+    </ul>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <button type="button" class="btn btn-primary btn-lg">Large</button>
+            <button type="button" class="btn btn-primary btn-md">Medium</button>
+            <button type="button" class="btn btn-primary btn-sm">Small</button>
+            <button type="button" class="btn btn-primary btn-xs">XSmall</button>
+        </div>
+    </div>
+    <hr>
+    <h2>Block Level Buttons</h2>
+    <p>A block level button spans the entire width of the parent element.</p>
+    <div class="panel well">
+        <div class="panel-heading">
+            <strong>Example</strong>
+        </div>
+        <div class="panel-body">
+            <button class="btn btn-primary btn-block">Button 1</button>
+            <button class="btn btn-default btn-block">Button 2</button>
+        </div>
+    </div>
+    <hr>
+    <h2>Active/Disabled Buttons</h2>
+    <p>A button can be set to an active (appear pressed) or a disabled (unclickable) state:</p>
+    <p>The class <code>.active</code> makes a button appear pressed, and the class <code>.disabled</code> makes a button unclickable:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <button class="btn btn-primary active">Active Primary</button>
+            <button class="btn btn-primary disabled">Disabled Primary</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

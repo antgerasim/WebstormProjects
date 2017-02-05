@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <title>Bootstrap Scrollspy Plugin (Advanced)</title>
+</head>
+<body>
+<div class="container">
+    <h1>Bootstrap Scrollspy Plugin (Advanced)</h1>
+    <h2>The Scrollspy Plugin</h2>
+    <p>The Scrollspy plugin is used to automatically update links in a navigation list based on scroll position.</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <iframe class="spytest" src="iframes/trybs_scrollspy.htm" frameborder="0" scrolling="yes"></iframe>
+        </div>
+    </div>
+    <h2>Example Explained</h2>
+    <p>Add <code>data-spy="scroll"</code> to the element that should be used as the scrollable area (often this is the
+        <code>&lt;body&gt;</code> element).
+
+        Then add the <code>data-target</code> attribute with a value of the id or the class name of the navigation bar (<code>.navbar</code>).
+        This is
+        to make sure that the navbar is connected with the scrollable area.
+
+        Note that scrollable elements must match the ID of the links inside the navbar's list items (
+        <code>&lt;div id="section1"&gt;</code> matches <code>&lt;a href="#section1"&gt;</code>).
+
+        The optional <code>data-offset</code> attribute specifies the number of pixels to offset from top when calculating the
+        position of scroll. This is useful when you feel that the links inside the navbar changes the active state too
+        soon or too early when jumping to the scrollable elements. Default is 10 pixels.
+    </p>
+    <p class="don-note">
+        <strong>Requires relative positioning:</strong> The element with data-spy="scroll" requires the CSS <strong>position</strong> property, with a value of "relative" to work properly.
+    </p>
+    <hr>
+    <h2>Scrollspy Vertical Menu</h2>
+    <p>In this example, we use Bootstrap's vertical navigation pills as menu:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <iframe class="spytest" src="http://www.w3schools.com/bootstrap/trybs_scrollspy2.htm" frameborder="0"></iframe>
+        </div>
+    </div>
+</div>
+</body>
+</html>

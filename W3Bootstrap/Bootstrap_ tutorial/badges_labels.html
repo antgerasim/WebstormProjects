@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Badges and Labels</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Bootstrap Badges and Labels</h1>
+    <h2>Badges</h2>
+    <p>Badges are numerical indicators of how many items are associated with a link. The numbers (5, 10, and 2) are the
+        badges.</p>
+    <p>Use the <code>.badge</code> class within <code>&lt;span&gt;</code> elements to create badges:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <a href="#">News <span class="badge">5</span></a><br>
+            <a href="#">Comments <span class="badge">10</span></a><br>
+            <a href="#">Updates <span class="badge">2</span></a><br>
+        </div>
+    </div>
+    <hr>
+    <p>Badges can also be used inside other elements, such as buttons:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <button type="button" class="btn btn-primary">Primary <span class="badge">7</span></button>
+        </div>
+    </div>
+    <h2>Labels</h2>
+    <p>Labels are used to provide additional information about something.</p>
+    <p>Use the <code>.label</code> class, followed by one of the six contextual classes <code>.label-default</code>,
+        <code>.label-primary</code>, <code>.label-success</code>, <code>.label-info</code>, <code>.label-warning</code>
+        or <code>.label-danger</code>, within a &lt;span&gt; element to create a label:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <h1>Label <span class="label label-default">New</span></h1>
+            <h2>Label <span class="label label-default">New</span></h2>
+            <h3>Label <span class="label label-default">New</span></h3>
+            <h4>Label <span class="label label-default">New</span></h4>
+            <h5>Label <span class="label label-default">New</span></h5>
+            <h6>Label <span class="label label-default">New</span></h6>
+        </div>
+    </div>
+    <hr>
+    <p>The following example shows all contextual label classes:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <span class="label label-default">Default Label</span>
+            <span class="label label-primary">Primary Label</span>
+            <span class="label label-success">Success Label</span>
+            <span class="label label-info">Info Label</span>
+            <span class="label label-warning">Warning Label</span>
+            <span class="label label-danger">Danger Label</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

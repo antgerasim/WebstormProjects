@@ -1,0 +1,18 @@
+<h2>Using the $location Service in the .html File</h2>
+<div ng-controller="defaultCtrl4 as c">
+    <div class="panel panel-default">
+        <h4 class="panel-heading">URL</h4>
+
+        <div class="panel-body">
+            <p>The URL is: {{c.url}}</p>
+
+            <div class="btn-group">
+                <button class="btn btn-primary" ng-click="c.setUrl('reset')">Reset</button>
+                <button class="btn btn-primary" ng-click="c.setUrl('path')">Path</button>
+                <button class="btn btn-primary" ng-click="c.setUrl('hash')">Hash</button>
+                <button class="btn btn-primary" ng-click="c.setUrl('search')">Search</button>
+                <button class="btn btn-primary" ng-click="c.setUrl('url')">URL</button>
+            </div>
+        </div>
+    </div>
+</div>

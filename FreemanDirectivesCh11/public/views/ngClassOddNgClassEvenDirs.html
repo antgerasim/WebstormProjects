@@ -1,0 +1,35 @@
+<div id="todoPanel" class="panel" ng-controller="defaultCtrl as dc">
+    <h3 class="panel-header">To Do List</h3>
+
+    <div class="row well">
+        <div class="col-xs-6" ng-repeat="(key, val) in dc.settings">
+            <h4>{{key}}</h4>
+
+            <div class="radio" ng-repeat="button in dc.buttonNames">
+                <label>
+                    <input type="radio" ng-model="dc.settings[key]"
+                           value="{{button}}">{{button}}
+                </label>
+            </div>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Action</th>
+            <th>Done</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in dc.todos" ng-class-even="dc.settings.Rows" ng-class-odd="dc.settings.Columns">
+            <td>{{$index + 1}}</td>
+            <td>{{item.action}}</td>
+            <td ng-style="{'background-color': dc.settings.Columns}">
+                {{item.complete}}
+            </td>
+        </tr>
+        </tbody>
+
+    </table>
+</div>

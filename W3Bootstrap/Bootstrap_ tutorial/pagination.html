@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <title>Bootstrap Pagination</title>
+</head>
+<body>
+<div class="container">
+    <h1>Bootstrap Pagination</h1>
+    <h2>Basic Pagination</h2>
+    <p>If you have a web site with lots of pages, you may wish to add some sort of pagination to each page. To create a
+        basic pagination, add the <code>.pagination</code> class to an <code>&lt;ul&gt;</code> element:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <ul class="pagination">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <h2>Active State</h2>
+    <p>The active state shows what is the current page.Add class <code>.active</code> to let the user know which page
+        he/she is on:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <ul class="pagination">
+                <li><a href="#">1</a></li>
+                <li class="active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <h2>Disabled State</h2>
+    <p>A disabled link cannot be clicked. Add class <code>.disabled</code> if a link for some reason is disabled</p>
+    <div class="panel well">
+        <div class="panel-heading">
+            <strong>Example</strong>
+        </div>
+        <div class="panel-body">
+            <ul class="pagination">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li class="disabled"><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <h2>Pagination Sizing</h2>
+    <p>Pagination blocks can also be sized to a larger size or a smaller size. Add class <code>.pagination-lg</code> for
+        larger blocks or <code>.pagination-sm</code> for smaller blocks:</p>
+    <div class="panel well">
+        <div class="panel-heading">
+            <strong>Example</strong>
+        </div>
+        <div class="panel-body">
+            <ul class="pagination pagination-lg">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+            <ul class="pagination pagination-sm">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <h2>Breadcrumbs</h2>
+    <p>Another form for pagination, is breadcrumbs. The <code>.breadcrumb</code> class indicates the current page's
+        location within a navigational hierarchy:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <ul class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Private</a></li>
+                <li><a href="#">Pictures</a></li>
+                <li><a href="#">Vacation</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

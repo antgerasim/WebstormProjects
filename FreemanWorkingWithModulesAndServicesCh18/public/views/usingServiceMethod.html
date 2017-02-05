@@ -1,0 +1,60 @@
+<h2>Using the service Method in the service.js File</h2>
+<div ng-controller="defaultCtrlServiceMethod as c">
+    <div class="well">
+        <div class="btn-group" tri-button2="" counter="c.data.totalClicks" source="c.data.cities">
+            <button class="btn btn-default" ng-repeat="city in c.data.cities">
+                {{city}}
+            </button>
+        </div>
+        <h5>Total Clicks: {{c.data.totalClicks}}</h5>
+    </div>
+</div>
+
+<p>The Module.service method also creates service objects, but in a slightly different way. When AngularJS needs to
+    satisfy a dependency for a service defined by the factory method, it simply uses the object returned by the factory
+    function, but for a service defined with the service method, AngularJS uses the object returned by the factory
+    function as a constructor and uses the JavaScript new keyword to create the service object.</p>
+<p>The new keyword isn't widely used in JavaScript development, and when it is used, it causes a lot of confusion
+    because most developers are familiar with the class-based inheritance used by JavaScript. A demonstration will help
+    explain what the new keyword does and how it is used by the Module.service method. In Listing 18-9, I have updated
+    the contents of the services.js file to take advantage of the service method.</p>
+<p>The first thing I have done is create a constructor function, which is essentially a template for defining
+    functionality that will be defined on new objects. My constructor function is called baseLogger, and it defines the
+    messageCount variable and the log method you saw in the previous section. The log method passes an undefined
+    variable called msgTyped to the console.log method, which I'll set when I use the baseLogger constructor function as
+    a template.</p>
+<p>The next step I take is to create a new constructor function called debugLogger and set its prototype to a new
+    object created using the new keyword and the baseLogger keyword. The new keyword creates a new object and copies the
+    properties and functions defined by the constructor function to the new object. The prototype property is used to
+    alter the template. I call it once to ensure that the debugLogger constructor inherits the property and method from
+    the baseLogger constructor and again to define the msgType property.</p>
+
+<p>The whole point of using constructors is that you can define functionality in the template once and then have it
+    applied to multiple objects-and to that end, I have repeated the process to create a third constructor function
+    called errorLogger. The use of the new keyword in both cases means that I define the messageCount property and the
+    log method once but have it apply to both to objects that are created by the by debugLogger and errorLogger
+    constructors and the objects that are created from them. To finish the example, I register the debugLogger and
+    errorLogger constructors as services, like this:</p>
+
+<p>
+    angular.module(&quot;customServices&quot;, [])
+    .service(&quot;logService&quot;, debugLogger)
+    .service(&quot;errorService&quot;, errorLogger);
+</p>
+
+
+var baseLogger = function () {
+this.messageCount = 0;
+this.log = function (msg) {
+console.log(this.msgType + ": " + (this.messageCount++) + " " + msg);
+}
+};
+var debugLogger = function () { };
+debugLogger.prototype = new baseLogger();
+debugLogger.prototype.msgType = "Debug";
+var errorLogger = function () { };
+errorLogger.prototype = new baseLogger();
+errorLogger.prototype.msgType = "Error";
+angular.module("customServices", [])
+.service("logService", debugLogger)
+.service("errorService", errorLogger);

@@ -1,0 +1,16 @@
+<h2>Adding a Second Controller to the .html File</h2>
+<div class="panel panel-default">
+    <div ng-controller="scopeCtrl" class="panel-body" scope-demo></div>
+    <div ng-controller="secondCtrl" class="panel-body" scope-demo></div>
+</div>
+
+<div class="panel well">
+    <div class="panel-body">
+        <p>There are two controllers, each of which contains no data when the application starts. Editing the input
+            elements
+            dynamically creates a name property in the scope of the controller that contains the directive instance the
+            input
+            element is managed by, but these properties are completely separate from one another.</p>
+        <p>As a result, no data-binding takes place.</p>
+    </div>
+</div>

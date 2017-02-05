@@ -1,0 +1,14 @@
+<div class="panel" id="todoPanel" ng-controller="formsConsCtrl as fcc">
+    <form name="donForm" novalidate ng-submit="fcc.addUser(newUser)">
+        <div class="well">
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" class="form-control" name="userEmail" required ng-model="newUser.email">
+            </div>
+            <div class="error" ng-show="donForm.userEmail.$invalid && donForm.userEmail.$dirty">
+                {{fcc.getError(donForm.userEmail.$error)}}
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary btn-block" ng-disabled="donForm.$invalid">OK</button>
+    </form>
+</div>

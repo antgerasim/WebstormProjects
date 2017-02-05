@@ -1,0 +1,36 @@
+<h2>Using a Template to Generate Content in the directives.html File</h2>
+<div ng-controller="defaultCtrl as c">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3>Products</h3>
+        </div>
+        <div class="panel-body">
+            <div unordered-list-templ="products">
+                This is where the list will go
+            </div>
+        </div>
+    </div>
+    <div class="panel well">
+        <div class="panel-body">
+            <p>The result is a simpler directive. Using code to generate HTML statements in any language can be verbose,
+                even
+                when using a library as tightly focused as jQuery/jqLite. There are two areas of change in the listing.
+                The first is that
+                I create a scope property called data and use it to set the source of the data, which I get from the
+                directive attribute.
+                (To keep the example simple, I changed the restrict definition property to A so that the directive can
+                be applied only
+                as an attribute, which means that I don’t have to check different attribute names to find the source of
+                the data.)
+                That’s all I have to do in the link function, which is no longer responsible for generating the HTML
+                elements used
+                to present the data to the user. Instead, I have used the template definition property to specify a
+                fragment of HTML
+                that will be used as the content of the element to which the directive has been applied, like this:</p>
+
+            <p>
+                template: &quot;&lt;ul&gt;&lt;li ng-repeat=&#39;item in data&#39;&gt;{{item.price | currency}}&lt;/li&gt;&lt;/ul&gt;&quot;
+            </p>
+        </div>
+    </div>
+</div>

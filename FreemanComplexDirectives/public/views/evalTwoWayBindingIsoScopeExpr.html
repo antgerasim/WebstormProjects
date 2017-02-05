@@ -1,0 +1,46 @@
+<script type="text/ng-template" id="scopeTemplate">
+    <div class="panel-body">
+        <p>Name: {{local}}, City: {{cityFn({nameVal: local})}}</p>
+    </div>
+</script>
+<h2>Using Isolated Scope Data to Evaluate an Expression</h2>
+<div ng-controller="evalCtrl as c">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            Direct Binding: <input type="text" ng-model="c.data.name">
+        </div>
+        <div class="panel-body" scope-demo6 city="c.getCity(nameVal)" nameprop="c.data.name"></div>
+    </div>
+</div>
+
+<div class="panel panel-default well">
+    <div class="panel-body">
+        <p>A variation on this previous technique allows you to pass data from the isolated scope to be evaluated as
+            part of the
+            expression in the controller’s scope. To do this, I modify the expression so that the argument passed to the
+            behavior is
+            the name of the property that has not been defined on the controller’s scope, as follows:</p>
+
+        <p>&lt;div class=&quot;panel-body&quot; scope-demo city=&quot;<strong>getCity(nameVal)</strong>&quot; nameprop=&quot;data.name&quot;&gt;&lt;/div&gt;</p>
+
+        <p>I selected nameVal as the name for the argument in this case. To pass data from the isolated scope, I have
+            updated
+            the binding in my template that evaluates the expression, passing in an object that provides values for the
+            expression
+            arguments, like this:</p>
+
+        <p>
+            ... <br>
+            &lt;div class=&quot;panel-body&quot;&gt;
+            &lt;p&gt;Name: {{local}}, City: {{<strong>cityFn({nameVal: local})</strong>}}&lt;/p&gt;
+            &lt;/div&gt;<br>
+            ...
+        </p>
+        <p>This has the effect of creating a data binding that evaluates an expression using a mix of data defined in the
+            isolated scope and the controller scope. You have to be careful to make sure that the controller scope doesn’t define a
+            property whose name corresponds to the argument in the expression; if it does, the value from the isolated scope will
+            be ignored.</p>
+    </div>
+</div>
+
+summery 445

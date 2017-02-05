@@ -1,0 +1,26 @@
+<script type="text/ng-template" id="triTemplate">
+    <div class="well">
+        <div class="btn-group">
+            <button class="btn btn-default">Yes</button>
+            <button class="btn btn-default">No</button>
+            <button class="btn btn-default">Not Sure</button>
+        </div>
+    </div>
+</script>
+<h2>Using a Formatter in the .html File</h2>
+<div ng-controller="defaultCtrl2">
+    <div>
+        <tri-button4 ng-model="dataValue"/>
+    </div>
+    <div class="well">
+        Value:
+        <select ng-model="dataValue">
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+            <option>Huh?</option>
+        </select>
+    </div>
+</div>
+
+<p></p>

@@ -1,0 +1,7 @@
+<div class="panel"> <!--this div to which the ctrl in applied is the view-->
+    <div class="page-header">
+        <h3>Im a controller</h3>
+    </div>
+    <h4 ng-controller="dayServiceValueCtrl as dc">Today is {{dc.day || "(unknown)"}}</h4>
+    <h4 ng-controller="tomorrowServiceValueCtrl as tc">Tomorrow is {{tc.day|| "(donknown)"}}</h4>
+</div>

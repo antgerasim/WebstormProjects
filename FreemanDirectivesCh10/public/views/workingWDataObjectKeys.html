@@ -1,0 +1,19 @@
+<h2>Working with Data Object Keys</h2>
+<div id="todoPanel" class="panel" ng-controller="defaultCtrl as dc">
+    <h3 class="panel-header">To Do List</h3>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Action</th>
+            <th>Done</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in dc.todos">
+            <td ng-repeat="(key, value) in item">
+                {{key}}={{value}}
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

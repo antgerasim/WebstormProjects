@@ -1,0 +1,46 @@
+<h2>Using a Scope-less Controller in the scopeLessSimpleController.html File</h2>
+<div class="well" ng-controller="scopeLessSimpleCtrl as ctrl">
+    <h4>Top Level Controller</h4>
+
+    <div class="input-group">
+        <span class="input-group btn">
+            <button class="btn btn-default" type="button" ng-click="ctrl.reverseText()">Reverse</button>
+        </span>
+        <input type="text" class="form-control" ng-model="ctrl.dataValue">
+    </div>
+</div>
+
+<div class="panel well">
+    <div class="panel-heading">
+        Explanation
+    </div>
+    <div class="panel-body">
+        <p>The controller in this example doesn’t declare a dependency on $scope and defines its data values and
+            behaviors
+            using the JavaScript this keyword, as follows:
+
+            this.dataValue = "Hello, Adam";
+        </p>
+        When applying a scope-less controller, the expression used for the ng-controller directive takes a different
+        form, specifying the name of a variable by which the controller will be accessible in the view:
+
+        &lt;div class="well" ng-controller="simpleCtrl as ctrl"&gt;
+        <p>
+            The format of this expression is &lt;controller to apply&gt; as &lt;variable name&gt;, and this example applies the
+            simpleCtrl controller to the div element and creates a variable called ctrl. I then use the ctrl variable to access
+            the data and behaviors in the view, like this:
+        </p>
+
+        <p>The format of this expression is
+            &lt; controller to apply&gt; as
+            &lt;variable name&gt;, and this example applies the
+            simpleCtrl controller to the div element and creates a variable called ctrl. I then use the ctrl
+            variable to access
+            the data and behaviors in the view, like this:
+
+
+        </p>
+
+    </div>
+</div>
+

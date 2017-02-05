@@ -1,0 +1,25 @@
+<style>
+    form.validate .ng-invalid-required.ng-dirty { background-color: lightpink; }
+    form.validate .ng-invalid-email.ng-dirty {
+        background-color: lightgoldenrodyellow; }
+    div.error { color: red; font-weight: bold; }
+</style>
+<div id="todoPanel" class="panel" ng-controller="formsDefer as fdc">
+    <form name="donForm" novalidate ng-submit="fdc.addUser(newUser)" ng-class="fdc.showValidation?'validate':'' ">
+        <div class="well">
+            <div class="form-group">
+                <label>Email:</label>
+                <input name="userEmail" type="email" class="form-control"
+                       required ng-model="newUser.email">
+
+                <div class="error" ng-show="fdc.showValidation">
+                    {{fdc.getError(donForm.userEmail.$error)}}
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">OK</button>
+        </div>
+    </form>
+
+    <div>{{fdc.message}}</div>
+
+</div>

@@ -1,0 +1,23 @@
+<h2>Making an Update to the Scope in the controllers.html File</h2>
+<div ng-controller="updateScopeCtrl">
+    <div class="well">
+        <label>Select a City:</label>
+        <select ng-options="city for city in cities" ng-model="city">  <!--ng-model directive means that the city model property in the scope is changed
+            when the user picks a value from the select element         -->
+        </select>
+    </div>
+    <div class="well">
+        <p>The city is: {{city}}</p>
+
+        <p>The country is: {{getCountry(city) || "Unknown"}}</p>
+    </div>
+
+</div>
+
+<!--
+Of particular note, it isn’t just the data binding that displays the selected city name that has been changed.
+The data binding that displays the result from invoking the controller behavior has also been updated. This is one
+of the great AngularJS strengths and—as you will learn—the cause of a lot of potential problems.-->
+
+<!--
+weiter mit 326 13-5-->

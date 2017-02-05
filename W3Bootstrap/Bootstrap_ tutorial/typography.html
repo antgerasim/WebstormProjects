@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Typography</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+<h1>Bootstrap Text/Typography</h1>
+
+<h2>Bootstrap's Default Settings</h2>
+
+<p>Bootstrap's global default font-size is 14px, with a line-height of 1.428</p>
+
+<p>This is applied to the &lt;body&gt; and all paragraphs.</p>
+
+<p>In addition, all &ltp&gt elements have a bottom margin that equals half their computed line-height (10px by
+    default).</p>
+
+<h2>Bootstrap vs. Browser Defaults</h2>
+
+<p>In this chapter, we will look at some HTML elements that will be styled a little bit differently by Bootstrap than
+    browser defaults.</p>
+
+<h3>&lt;h1&gt; - &lt;h6&gt;</h3>
+
+<p>By default, Bootstrap will style the HTML headings h1 to h6 in the following way:</p>
+
+<div class="panel panel-default">
+    <div class="panel-heading"><h4>Example</h4></div>
+    <div class="panel-body">
+        <h1>h1 Bootstrap heading (36px)</h1>
+
+        <h2>h2 Bootstrap heading (30px)</h2>
+
+        <h3>h3 Bootstrap heading (24px)</h3>
+        <h4>h4 Bootstrap heading (18px)</h4>
+        <h5>h5 Bootstrap heading (14px)</h5>
+        <h6>h6 Bootstrap heading (12px)</h6>
+    </div>
+</div>
+<h2>&lt;small&gt;</h2>
+
+<p>In Bootstrap the HTML &lt;small&gt; element is used to create a lighter, secondary text in any heading:</p>
+
+<div class="panel panel-default">
+    <h4 class="panel-heading">Example</h4>
+
+    <div class="panel-body">
+        <h1>h1 heading
+            <small>secondary text</small>
+        </h1>
+        <h2>h2 heading
+            <small>secondary text</small>
+        </h2>
+        <h3>h3 heading
+            <small>secondary text</small>
+        </h3>
+        <h4>h4 heading
+            <small>secondary text</small>
+        </h4>
+        <h5>h5 heading
+            <small>secondary text</small>
+        </h5>
+    </div>
+</div>
+<h2>&lt;mark&gt;</h2>
+
+<div class="panel panel-default">
+    <h4 class="panel-heading">Example</h4>
+
+    <div class="panel-body">
+        <p>Use the mark element to
+            <mark>highlight</mark>
+            text.
+        </p>
+    </div>
+</div>
+<h2>&lt;abbr&gt;</h2>
+
+<p>Bootstrap will style the HTML &lt;abbr&gt; element in the following way:</p>
+
+<div class="panel panel-default">
+    <h4 class="panel-heading">Example</h4>
+
+    <div class="panel-body">
+        <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+    </div>
+</div>
+<h2>&lt;blockquote&gt;</h2>
+
+<p>Bootstrap will style the HTML &lt;blockquote&gt; element in the following way:</p>
+
+<div class="panel panel-default">
+    <h4 class="panel-heading">Example</h4>
+
+    <div class="panel-body">
+        <blockquote><p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation
+            organization,
+            WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5
+            million globally.</p>
+            <footer>From WWF's website</footer>
+        </blockquote>
+    </div>
+</div>
+<p>To show the quote on the right, use the .blockquote-reverse class:</p>
+
+<div class="panel panel-default">
+    <h4 class="panel-heading">Example</h4>
+
+    <div class="panel-body">
+        <blockquote class="blockquote-reverse"><p>For 50 years, WWF has been protecting the future of nature. The
+            world's leading conservation organization,
+            WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5
+            million globally.</p>
+            <footer>From WWF's website</footer>
+        </blockquote>
+    </div>
+</div>
+<h2>&lt;dl&gt;</h2>
+
+<p>Bootstrap will style the HTML &lt;dl&gt; element in the following way:</p>
+
+<div class="panel panel-default">
+    <h4 class="panel-heading">Example</h4>
+
+    <div class="panel-body">
+        <p>The dl element indicates a description list:</p>
+        <dl>
+            <dt>Coffee</dt>
+            <dd>- black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>- white cold drink</dd>
+        </dl>
+    </div>
+</div>
+<h2>&lt;code&gt;</h2>
+
+<P>Bootstrap will style the HTML &lt;code&gt; element in the following way:</P>
+
+<div class="panel panel-default">
+    <h4 class="panel-heading">Example</h4>
+
+    <div class="panel-body">
+        <p>Inline snippets of code should be embedded in the code element:</p>
+
+        <p>The following HTML elements: <code>span</code>,<code>section</code>, and <code>div</code> defines a section
+            in a
+            document.</p>
+    </div>
+</div>
+<h2>&lt;kbd&gt;</h2>
+
+<P>Bootstrap will style the HTML &lt;kbd&gt; element in the following way:</P>
+
+<div class="panel panel-default">
+    <h4 class="panel-heading">Example</h4>
+
+    <div class="panel-body">
+        <p>To indicate input that is typically entered via the keyboard, use the kbd element:</p>
+
+        <p>Use <kbd>ctrl + p</kbd> to open the Print dialog box.</p>
+
+    </div>
+</div>
+<h2>Contextual Colors and Backgrounds</h2>
+
+<p>Bootstrap also has some contextual classes that can be used to provide "meaning through colors".</p>
+
+<p>The classes for text colors are:<code>.text-muted</code>, <code>.text-primary</code>, <code>.text-success</code>,
+    <code>.text-info</code>, <code>.text-warning</code>, and <code>.text-danger</code>:</p>
+
+<div class="panel panel-default">
+    <h4 class="panel-heading">Example</h4>
+
+    <div class="panel-body">
+        <p>Use the contextual classes to provide "meaning through colors":</p>
+
+        <p class="text-muted">This text is muted</p>
+
+        <p class="text-primary">This text is important.</p>
+
+        <p class="text-success">This text indicates success.</p>
+
+        <p class="text-info">This text represents some information.</p>
+
+        <p class="text-warning">This text represents a warning.</p>
+
+        <p class="text-danger">This text represents danger.</p>
+
+    </div>
+</div>
+<h2>More Typography Classes</h2>
+
+<p>The Bootstrap classes below can be added to style HTML elements further:</p>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Class</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td>.lead</td>
+        <td>Makes a paragraph stand out</td>
+    </tr>
+    <tr>
+        <td>.small</td>
+        <td>Indicates smaller text (set to 85% of the size of the parent)</td>
+    </tr>
+    <tr>
+        <td>.text-left</td>
+        <td>Indicates left-aligned text</td>
+    </tr>
+    <tr>
+        <td>.text-center</td>
+        <td>Indicates center-aligned text</td>
+    </tr>
+    <tr>
+        <td>.text-right</td>
+        <td>Indicates right-aligned text</td>
+    </tr>
+    <tr>
+        <td>.text-justify</td>
+        <td>Indicates justified text</td>
+    </tr>
+    <tr>
+        <td>.text-nowrap</td>
+        <td>Indicates no wrap text</td>
+    </tr>
+    <tr>
+        <td>.text-lowercase</td>
+        <td>Indicates lowercased text</td>
+    </tr>
+    <tr>
+        <td>.text-uppercase</td>
+        <td>Indicates uppercased text</td>
+    </tr>
+    <tr>
+        <td>.text-capitalizee</td>
+        <td>Indicates capitalized text</td>
+    </tr>
+    <tr>
+        <td>.initialism</td>
+        <td>Displays the text inside an &lt;abbr&lt; element in a slightly smaller font size</td>
+    </tr>
+    <tr>
+        <td>.list-unstyled</td>
+        <td>Removes the default list-style and left margin on list items (works on both &lt;ul&gt; and &lt;ol&gt;). This class only applies to immediate children list items (to remove the default list-style from any nested lists, apply this class to any nested lists as well)</td>
+    </tr>
+    <tr>
+        <td>.dl-horizontal</td>
+        <td>Lines up the terms (&lt;dt&gt;) and descriptions (&lt;dd&gt;) in &lt;dl&gt; elements side-by-side. Starts off like default &lt;dl&gt;s, but when the browser window expands, it will line up side-by-side</td>
+    </tr>
+    <tr>
+        <td>.pre-scrollable</td>
+        <td>Makes a &lt;pre&gt; element scrollable</td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

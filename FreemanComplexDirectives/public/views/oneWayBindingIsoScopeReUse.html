@@ -1,0 +1,16 @@
+<script type="text" id="scopeTemplate">
+    <div class="panel-body">
+    <p>Data Value: {{local}}</p>
+</div>
+</script>
+
+<h2>Reusing a Directive with a One-Way Data Binding in the .html</h2>
+<div ng-controller="secondCtrl as c">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            Direct Binding: <input type="text" ng-model="c.data.name">
+        </div>
+        <div class="panel-body" scope-demo4 nameprop="{{c.data.name}}"></div>
+        <div class="panel-body" scope-demo4 nameprop="{{c.data.name}}"></div>
+    </div>
+</div>

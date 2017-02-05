@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Replacing jqLite with jQuery in the .html File</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+    <script src="lib/angular/angular.min.js"></script>
+    <script>
+        angular.module("exampleApp2222", [])
+                .directive("unorderedList5", function () {
+                    return function (scope, element, attrs) {
+                        var data = scope[attrs["unorderedList5"]];
+                        var propertyExpression = attrs["listProperty"];
+                        if (angular.isArray(data)) {
+                            var listElem = angular.element("<ul>").appendTo(element);
+                            for (var i = 0; i < data.length; i++) {
+                                (function () {
+                                    var itemElement =
+                                            angular.element("<li>").appendTo(listElem);
+                                    var index = i;
+                                    var watcherFn = function (watchScope) {
+                                        return watchScope.$eval(propertyExpression,
+                                                data[index]);
+                                    }
+
+                                    scope.$watch(watcherFn, function (newValue, oldValue) {
+                                        itemElement.text(newValue);
+                                    });
+                                }());
+                            }
+                        }
+                    }
+                }).controller("defaultCtrl222", function ($scope) {
+            $scope.products = [
+                {name: "Apples", category: "Fruit", price: 1.20, expiry: 10},
+                {name: "Bananas", category: "Fruit", price: 2.42, expiry: 7},
+                {name: "Pears", category: "Fruit", price: 2.02, expiry: 6}
+            ];
+            $scope.incrementPrices = function () {
+                for (var i = 0; i < $scope.products.length; i++) {
+                    $scope.products[i].price++;
+                }
+            }
+        })
+    </script>
+</head>
+<body>
+<style>/*Important*/
+.bold {
+    font-weight: bold;
+}
+</style>
+<h2>Adding an Event Handler in the .html File</h2>
+
+<div ng-controller="defaultCtrl222">
+    <div unordered-list5>
+        <button>Click Me</button>
+    </div>
+</div>
+</body>
+</html>

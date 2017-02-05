@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" ng-app="donApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="lib/angular/angular.js"></script>
+    <script >
+        donApp = angular.module('donApp,[]');
+        donApp.controller('myController', function ($scope, $http) {
+            $http.get('data.json').success(function (data) {
+                $scope.myData = data;
+            });
+        });
+    </script>
+</head>
+<body ng-controller="myController">
+<table>
+    <tr ng-repeat="data in myData">
+        <td>{{data.Name}}</td>
+        <td>{{data.Company}}</td>
+    </tr>
+</table>
+</body>
+</html>

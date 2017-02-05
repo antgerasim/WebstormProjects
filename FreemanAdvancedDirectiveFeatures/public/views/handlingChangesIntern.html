@@ -1,0 +1,40 @@
+<script type="text/ng-template" id="triTemplate">
+    <div class="well">
+        <div class="btn-group">
+            <button class="btn btn-default">Yes</button>
+            <button class="btn btn-default">No</button>
+            <button class="btn btn-default">Not Sure</button>
+        </div>
+    </div>
+</script>
+<h2>Handling External Changes</h2>
+<div ng-controller="defaultCtrl2">
+    <div>
+        <tri-button3 ng-model="dataValue"/>
+    </div>
+    <div class="well">
+        Value:
+        <select ng-model="dataValue">
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+        </select>
+    </div>
+</div>
+
+<p>Now, when you click on one of the button, the select box will change its value</p>
+
+<p>Use the jqLite 'on' method to register a handler function for the click event on the button elements in the directive
+    template. When the user clicks one of the buttons, the NgModel controller gets notified by calling the $setViewValue
+    method</p>
+<p>scope.$apply(function () {
+    ctrl.$setViewValue(event.target.innerText);
+    });
+</p>
+
+<p>The scope.$apply method is used to push updates into the data model. The scope will execute the function and then
+    update its state; using a function allows me to notify the NgModel controller of the change and have the scope
+    update in a single step.</p>
+<p>To update the data-bound value, I call the $setViewValue, which accepts the new value as its argument.</p>
+<p>For this example, I get the value from the text content of the button that has been clicked, such that clicking the
+    Yes button causes the dataValue property to be set to Yes.</p>

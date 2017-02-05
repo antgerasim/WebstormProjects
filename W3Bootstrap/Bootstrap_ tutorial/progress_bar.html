@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <title>Bootstrap Progress Bars</title>
+    <style>
+        /*        .bg-warning {
+                    margin: 10px 20px 20px 15px !important;
+                    padding: 20px 10px 10px 50px !important;
+                    border-radius: 60px !important;
+                }*/
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Basic Progress Bar</h1>
+    <p>A progress bar can be used to show a user how far along he/she is in a process. Bootstrap provides several types
+        of progress bars. To create a default progress bar, add a <code>.progress</code> class to a <code>
+            &lt;div&gt;</code> element:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+                     style="width: 70%"><span class="sr-only">70% Complete</span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-warning">
+        <p><strong>Note:</strong> Progress bars are not supported in Internet Explorer 9 and earlier (because they use
+            CSS3 transitions and animations to achieve some of their effects).</p>
+        <p><strong>Note:</strong> To help improve accessibility for people using screen readers, you should include the
+            aria-* attributes.</p>
+    </div>
+    <h2>Progress Bar With Label</h2>
+    <p>Remove the <code>.sr-only</code> class from the progress bar to show a visible percentage:</p>
+    <div class="panel well">
+        <div class="panel-heading">
+            <strong>Example</strong>
+        </div>
+        <div class="panel-body">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+                     style="width: 70%;">70%
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h2>Colored Progress Bars</h2>
+    <p>Contextual classes are used to provide "meaning through colors". The contextual classes that can be used with
+        progress bars are:</p>
+    <ul>
+        <li><code>.progress-bar-success</code></li>
+        <li><code>.progress-bar-info</code></li>
+        <li><code>.progress-bar-warning</code></li>
+        <li><code>.progress-bar-danger</code></li>
+    </ul>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0"
+                     aria-valuemax="100" style="width:40%">40% Complete (success)
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-info" role="progressbar" style="width: 50%">50% Complete</div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-warning" role="progressbar" style="width: 60%">60% Complete</div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-danger" role="progressbar" style="width: 70%">70% Complete</div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h2>Striped Progress Bars</h2>
+    <p>Progress bars can also be striped. Add class .progress-bar-striped to add stripes to the progress bars:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <div class="progress">
+                <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 40%"
+                     role="progressbar">40% Complete
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-info progress-bar-striped" style="width: 50%" role="progressbar">
+                    50% Complete
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar"
+                     style="width:60%">
+                    60% Complete
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar"
+                     style="width: 70%">70% Complete
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h2>Animated Progress Bar</h2>
+    <p>Add class <code>.active</code> to animate the progress bar:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <div class="progress">
+                <div class="progress-bar progress-bar-info progress-bar-striped active" style="width: 40%"
+                     role="progressbar"></div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h2>Stacked Progress Bars</h2>
+    <p>Progress bars can also be stacked. Create a stacked progress bar by placing multiple bars into the same <code>&lt;div class="progress"&gt;</code>:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar" style="width: 40%">Free Space</div>
+                <div class="progress-bar progress-bar-warning" role="progressbar" style="width: 35%">Warning</div>
+                <div class="progress-bar progress-bar-danger" role="progressbar" style="width: 20%">Danger</div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>

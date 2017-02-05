@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="container">
+
+    <form action="" method="post" class="form-horizontal" role="form">
+
+        <fieldset>
+            <legend>Basic Information</legend>
+
+            <div class="form-group">
+                <label for="fullName" class="col-sm-3 control-label">Name</label>
+
+                <div class="col-sm-9">
+                    <input type="text" id="fullName" name="fullName" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="notes" class="col-sm-3 control-label">Notes</label>
+
+                <div class="col-sm-9">
+                    <textarea name="notes" id="notes" cols="40" rows="5" class="form-control"></textarea>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="department" class="col-sm-3 form-control-label">Department</label>
+
+                <div class="col-sm-9">
+                    <select name="department" id="department" class="form-control">
+                        <option value="engineering">Engineering</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="finance">Finance</option>
+                        <option value="administration">Administration</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+
+            <fieldset>
+                <legend>Perks</legend>
+                <div class="form-group">
+                    <div class="col-sm-3">
+                    </div>
+                    <div class="col-sm-9">
+
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="perkCar">Company Car</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="perkStock">Stock Options</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="perkStock">Stock Options</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Payroll Type</legend>
+                <div class="col-sm-3"></div>
+                <div class="col-sm-9">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="payrollType" value="w2"/>
+                            W-2
+                        </label>
+                        <br>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="payrollType" value="ten99"/>
+                            1099
+                        </label>
+                        <br>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="payrollType" value="ten99"/>
+                            None
+                        </label>
+                        <br>
+                    </div>
+                    <br>
+                </div>
+            </fieldset>
+        </fieldset>
+
+
+    </form>
+
+</div>
+
+
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>

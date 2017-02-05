@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <title>Bootstrap Collapse</title>
+</head>
+<body>
+<div class="container">
+    <h1>Bootstrap Collapse</h1>
+    <h2>Basic Collapsible</h2>
+    <p>Collapsibles are useful when you want to hide and show large amount of content:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <button class="btn btn-primary" data-toggle="collapse" data-target="#demo">Collapsible</button>
+            <div class="collapse" id="demo">
+                Lorem ipsum dolor sit amet.
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h2> Example Explained</h2>
+    <p>The .collapse class indicates a collapsible element (a <code>&lt;div&gt;</code> in our example); this is the
+        content that will be shown or hidden with a click of a button. To control (show/hide) the collapsible content,
+        add the <code>data-toggle="collapse"</code> attribute to an <code>&lt;a&gt;</code> or a <code>
+            &lt;button&gt;</code> element. Then add the <code>data-target="#id"</code> attribute to connect the button
+        with the collapsible content (<code>&lt;div id="demo"&gt;</code>). </p>
+    <p class="don-note"><strong>Note:</strong> For <code>&lt;a&gt;</code> elements, you can use the <code>href</code>
+        attribute
+        instead of the <code>data-target</code> attribute:</p>
+    <p>By default, the collapsible content is hidden. However, you can add the <code>.in</code> class to show the
+        content by default:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <button class="btn btn-primary" data-toggle="collapse" data-target="#demo2">Collapse In</button>
+            <div class="collapse in" id="demo2">
+                Lorem ipsum dolor sit amet.
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h2>Collapsible Panel</h2>
+    <p>The following example shows a collapsible panel:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"><a href="#collapse1" data-toggle="collapse">Collapsible panel</a></h4>
+
+                    </div>
+                    <div class="panel-collapse collapse" id="collapse1">
+                        <div class="panel-body">Panel Body</div>
+                        <div class="panel-footer">Panel Footer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h2>Collapsible List Group</h2>
+    <p>The following shows a collapsible panel with a list group inside:</p>
+    <div class="panel well">
+        <div class="panel-heading">
+            <strong>Example</strong>
+        </div>
+        <div class="panel-body">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a href="#collapse2" data-toggle="collapse">Collapsible list group</a>
+                        </h4>
+                    </div>
+                    <div class="panel-collapse collapse" id="collapse2">
+                        <ul class="list-group">
+                            <li class="list-group-item">One</li>
+                            <li class="list-group-item">Two</li>
+                            <li class="list-group-item">Three</li>
+                        </ul>
+                        <div class="panel-footer">Footer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h2>Accordion</h2>
+    <p>The following example shows a simple accordion by extending the panel component.</p>
+    <p><strong>Note:</strong> Use the data-parent attribute to make sure that all collapsible elements under the
+        specified parent will be closed when one of the collapsible item is shown.</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a href="#collapse3" data-toggle="collapse" data-parent="#accordion">Collapsible Group1</a>
+                        </h4>
+                    </div>
+                    <div id="collapse3" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid atque debitis
+                            dignissimos, dolorem dolorum iure non nostrum quasi quia quos sequi soluta vero! Est
+                            exercitationem obcaecati odit quod vel.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a href="#collapse4" data-toggle="collapse" data-parent="#accordion">Collapsible Group 2</a>
+                        </h4>
+                    </div>
+                    <div id="collapse4" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut cupiditate excepturi id
+                            neque nesciunt nostrum recusandae suscipit tempore temporibus!
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a href="#collapse5" data-toggle="collapse" data-parent="#accordion">Collapsible Group 3</a>
+                        </h4>
+                    </div>
+                    <div class="panel-collapse collapse" id="collapse5">
+                        <div class="panel-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus dolor ducimus
+                            illo natus numquam, quis reprehenderit saepe vel voluptate.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

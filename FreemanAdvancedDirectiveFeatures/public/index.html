@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="donXample">
+<head>
+    <title>Freeman - Advanced Directive Features</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script>
+        angular
+                .module('donXample', ['ngRoute'])
+                .config(function ($routeProvider) {
+                    $routeProvider
+                            .when('/beginning', {
+                                templateUrl: '/views/beginning.html'
+                            })
+                            .when('/training', {
+                                templateUrl: '/views/training.html'
+                            })
+                            .when('/compilefn',{
+                                templateUrl:'/views/compileFn.html'
+                            })
+                            .when('/controllersindirectives',{
+                                templateUrl:'/views/controllersInDirectives.html'
+                            })
+                            .when('/controllersindirectives2',{
+                                templateUrl:'/views/controllersInDirectives2.html'
+                            })
+                            .when('/controllersindirectives3',{
+                                templateUrl:'/views/controllersInDirectives3.html'
+                            })
+                            .when('/customformelements',{
+                                templateUrl:'/views/customFormElements.html'
+                            })
+                            .when('/handlingchanges',{
+                                templateUrl:'/views/handlingChanges.html'
+                            })
+                            .when('/handlingchangesintern',{
+                                templateUrl:'/views/handlingChangesIntern.html'
+                            })
+                            .when('/formattingdatavalues',{
+                                templateUrl:'/views/formattingDataValues.html'
+                            })
+                            .when('/validatingcustomformelements',{
+                                templateUrl:'/views/ValidatingCustomFormElements.html'
+                            })
+                            .otherwise({
+                                templateUrl: '/views/start.html'
+                            })
+                })
+    </script>
+    <script src="javascripts/controllers/defaultCtrl.js"></script>
+    <script src="javascripts/directives/panelDir.js"></script>
+    <script src="javascripts/controllers/compileFnCtrl.js"></script>
+    <script src="javascripts/directives/compileFnDir.js"></script>
+    <script src="javascripts/controllers/productCtrl.js"></script>
+    <script src="javascripts/directives/productItemDir.js"></script>
+    <script src="javascripts/directives/productTableDir.js"></script>
+    <script src="javascripts/directives/productItem2Dir.js"></script>
+    <script src="javascripts/directives/productTable2Dir.js"></script>
+    <script src="javascripts/directives/resetTotalsDir.js"></script>
+    <script src="javascripts/directives/triButtonDir.js"></script>
+    <script src="javascripts/controllers/defaultCtrl2.js"></script>
+    <script src="javascripts/directives/triButtonChangesDir.js"></script>
+    <script src="javascripts/directives/triButtonChangesInternDir.js"></script>
+    <script src="javascripts/directives/trainingDir.js"></script>
+    <script src="javascripts/directives/triButtonChangesFormatDir.js"></script>
+    <script src="javascripts/directives/customFormsValDir.js"></script>
+
+</head>
+<body>
+<h1>Chapter17 - Advanced Directive Features</h1>
+<div ng-view></div>
+</body>
+</html>
+
+<!--
+weiter mit 465-->

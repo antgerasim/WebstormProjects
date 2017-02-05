@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="donXample">
+<head>
+    <title>Forms</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script>
+        angular.module('donXample', ['ngRoute'])
+                .config(function ($routeProvider) {
+                    $routeProvider
+                            .when('/training', {
+                                templateUrl: '/views/training.html'
+                            })
+                            .when('/beginning', {
+                                templateUrl: '/views/beginning.html'
+                            })
+                            .when('/basicformvalidations', {
+                                templateUrl: '/views/basicFormValidations.html'
+                            })
+                            .when('/controlelementvisibilityforms', {
+                                templateUrl: '/views/controlElementVisibilityForms.html'
+                            })
+                            .when('/consolidatingValidation', {
+                                templateUrl: '/views/consolidatingValidation.html'
+                            })
+                            .when('/deferringValidation', {
+                                templateUrl: '/views/deferringValidation.html'
+                            })
+                            .when('/inputElementsAttributes', {
+                                templateUrl: '/views/inputElementsAttributes.html'
+                            })
+                            .when('/additionattributescheckb', {
+                                templateUrl: '/views/additionAttributesCheckB.html'
+                            })
+                            .when('/additionattributestextarea', {
+                                templateUrl: '/views/additionAttributesTextArea.html'
+                            })
+                            .when('/selectelementattributes', {
+                                templateUrl: '/views/selectelementattributes.html'
+                            })
+                            .when('/optgroupelements',{
+                                templateUrl: '/views/optGroupElements.html'
+                            })
+                            .otherwise({
+                                templateUrl: '/views/start.html'
+                            });
+                });
+
+    </script>
+    <script src="controller/mainCtrl.js"></script>
+    <script src="controller/formsCtrl.js"></script>
+    <script src="controller/formsConsCtrl.js"></script>
+    <script src="controller/formsDeferCtrl.js"></script>
+    <script src="controller/formsInputElemsCtrl.js"></script>
+    <script src="controller/additionAttributesCheckBCtrl.js"></script>
+    <script src="controller/additionAttributesTextAreaCtrl.js"></script>
+    <script src="controller/selectElementAttributesCtrl.js"></script>
+    <script src="controller/optGroupElementsCtrl.js"></script>
+    <style>
+        form .ng-invalid-required.ng-dirty {
+            background-color: lightpink;
+        }
+
+        form .ng-invalid-email.ng-dirty {
+            background-color: lightgoldenrodyellow;
+        }
+
+        form .ng-valid.ng-dirty {
+            background-color: lightgreen;
+        }
+
+        span.summary.ng-invalid {
+            color: red;
+            font-weight: bold;
+        }
+
+        span.summary.ng-valid {
+            color: green
+        }
+
+        div.error {
+            color: red;
+            font-weight: bold;
+        }
+
+        /*        form.validate .ng-invalid-required.ng-dirty {
+                    background-color: lightpink;
+                }
+
+                form.validate .ng-invalid-email.ng-dirty {
+                    background-color: lightgoldenrodyellow;
+                }*/
+    </style>
+</head>
+<body class="container">
+<div ng-view></div>
+</body>
+</html>

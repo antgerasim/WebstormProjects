@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="uiApp">
+<head>
+    <meta charset="UTF-8">
+    <title>BootstrapUI</title>
+    <!--or bootstrap cdn for CSS-->
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+    <script src="lib/angular/angular.min.js"></script>
+<!--    <script src="lib/angular-bootstrap/ui-bootstrap.min.js"></script>-->
+    <!--Long story short use tpls unless you are going to create customized partials.-->
+    <!-- In any case you should only include one of the listed files.-->
+    <script src="lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script src="lib/angular-animate/angular-animate.min.js"></script>
+    <script src="javascripts/modules/uiApp.js" ></script>
+    <script src="javascripts/controllers/form1Ctrl.js"></script>
+    <script src="javascripts/controllers/form2Ctrl.js"></script>
+    <script src="javascripts/controllers/instances/modal2InstanceCtrl.js"></script>
+    <script src="javascripts/controllers/modalDemoCtrl.js"></script>
+    <script src="javascripts/controllers/instances/modalDemoInstanceCtrl.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+<h1 class="h1">UI Bootstrap</h1>
+<div ng-view></div>
+<!--What is the difference between ui-bootstrap-tpls.min.js and ui-bootstrap.min.js-->
+<!--http://stackoverflow.com/questions/19820625/what-is-the-difference-between-ui-bootstrap-tpls-min-js-and-ui-bootstrap-min-js-->
+</div>
+</body>
+</html>

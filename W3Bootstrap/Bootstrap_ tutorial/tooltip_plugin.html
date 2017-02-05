@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //to prevent to jump up to page start when click
+            $('[data-toggle="tooltip"]').click(function(e) {
+                e.preventDefault();
+            });
+
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <title>Bootstrap Tooltip Plugin</title>
+</head>
+<body>
+<div class="container">
+    <h1>Bootstrap Tooltip Plugin</h1>
+    <h2>The Tooltip Plugin</h2>
+    <p>The Tooltip plugin is small pop-up box that appears when the user moves the mouse pointer over an element:</p>
+    <p class="don-note">
+        <strong>Tip:</strong> Plugins can be included individually (using Bootstrap's individual "tooltip.js" file),
+        or all at once (using "bootstrap.js" or "bootstrap.min.js"). </p>
+    <h2>How To Create a Tooltip</h2>
+    <p>To create a tooltip, add the <code>data-toggle="tooltip"</code> attribute to an element. Use the
+        <code>title</code> attribute to specify
+        the text that should be displayed inside the tooltip:</p>
+    <p class="don-note"><strong>Note: </strong>Tooltips must be initialized with jQuery: select the specified element
+        and call the <code>tooltip()</code> method.</p>
+    <p>The following code will enable all tooltips in the document:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
+        </div>
+    </div>
+    <hr>
+    <h2>Positioning Tooltips</h2>
+    <p>By default, the tooltip will appear on top of the element.</p>
+    <p>Use the <code>data-placement</code> attribute to set the position of the tooltip on top, bottom, left or the
+        right side of the
+        element:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <a href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Hover</a>
+            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Hooray!">Hover</a>
+            <a href="#" data-toggle="tooltip" data-placement="left" title="Hooray!">Hover</a>
+            <a href="#" data-toggle="tooltip" data-placement="right" title="Hooray!">Hover</a>
+        </div>
+    </div>
+    <p class="don-note">
+        <strong>Tip:</strong> You can also use the <code>data-placement</code> attribute with a value of "auto", which
+        will let the browser decide the position of the tooltip. For example, if the value is "auto left", the tooltip
+        will display on the left side when possible, otherwise on the right. </p>
+</div>
+</body>
+</html>

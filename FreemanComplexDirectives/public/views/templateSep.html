@@ -1,0 +1,35 @@
+<h2>Separating Template Content in the .html File</h2>
+<script type="text/template" id="listTemplate">
+    <ul>
+        <li ng-repeat="item in data">{{item.price | currency}}</li>
+    </ul>
+</script>
+<div ng-controller="defaultCtrl as c">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3>Products</h3>
+        </div>
+        <div class="panel-body">
+            <div unordered-list-sep-templ="products">
+                This is where the list will go
+            </div>
+        </div>
+    </div>
+    <div class="panel well">
+        <div class="panel-body">
+            <p>
+                I added a script element that contains the template content I want to use and set the template definition object
+                function. jqLite doesn’t support selecting elements by their id attribute (and I don’t want to use the full jQuery library
+                for such a simple directive), so I have used the DOM API to locate the script element and wrap it in a jqLite object,
+                like this:
+            <p>
+            return angular.element(document.querySelector(&quot;#listTemplate&quot;)).html();
+            </p>
+            <p>
+                I use the jqLite html method to get the HTML content of the template element and return it as the result from the
+                template function. I’d rather not break into the DOM API like this, but I find it the least bad option when I want to go
+                outside of the features that jqLite provides for such simple tasks.
+            </p>
+        </div>
+    </div>
+</div>

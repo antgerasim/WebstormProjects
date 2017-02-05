@@ -1,0 +1,18 @@
+<h2>Managing Directive Scopes</h2>
+<div ng-controller="scopeCtrl as c" class="panel panel-default">
+    <div class="panel-body" scope-demo></div>
+    <div class="panel-body" scope-demo></div>
+</div>
+
+<div class="panel well">
+    <div class="panel-body">
+        <p>There is no scope data in this example when the application first starts, but the ng-model directive that I
+            included
+            in the directive template means that AngularJS will dynamically create a name property when the contents of
+            either
+            input element are changed.</p>
+
+        <p>Since there is only one scope in this example—well, aside from the unused root scope, both directives bind to
+            the same property, and that’s why they are synchronized.</p>
+    </div>
+</div>

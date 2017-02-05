@@ -1,0 +1,39 @@
+<script type="text/ng-template" id="productTemplate">
+    <td>{{item.name}}</td>
+    <td><input type="text" ng-model="item.quantity"></td>
+</script>
+<script type="text/ng-template" id="resetTemplate">
+    <td colspan="2">
+        <button ng-click="reset()">Reset</button>
+    </td>
+</script>
+<h2>Adding a New Directive to the controllersInDirectives3.html File</h2>
+<div ng-controller="productCtrl">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <table class="table table-striped" product-table="totalValue" product-data="products" ng-transclude>
+                <tr>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                </tr>
+                <tr ng-repeat="item in products" product-item2></tr>
+                <tr>
+                    <th>Total:</th>
+                    <td>{{totalValue}}</td>
+                </tr>
+                <tr reset-totals product-data="products" property-name="quantity"></tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-danger">
+    <div class="panel-heading">
+        Error
+    </div>
+    <div class="panel-body">
+        <p>Doesnt Work ctrl is null in productItem2Dir :(</p>
+    </div>
+</div>
+
+460

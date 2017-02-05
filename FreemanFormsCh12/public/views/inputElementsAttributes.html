@@ -1,0 +1,24 @@
+<div class="panel" id="todoPanel" ng-controller="formsInputElemsCtrl as c">
+    <form name="donForm" novalidate>
+        <div class="well">
+            <div class="form-group">
+                <label>Text:</label>
+                <!--                When the type attribute is email, url, or number, AngularJS sets the ng-pattern automatically to check the
+                                formatting. You should not set the ng-pattern attribute on these types of input element.-->
+                <input name="sample" class="form-control" ng-model="inputValue" ng-required="c.requireValue"
+                       ng-minlength="3" ng-maxlength="10" ng-pattern="c.matchPattern">
+            </div>
+        </div>
+        <div class="well">
+            <p>Required Error:{{donForm.sample.$error.required}}</p>
+
+            <p>Min Length Error: {{donForm.sample.$error.minlength}}</p>
+
+            <p>Max Length Error: {{donForm.sample.$error.maxlength}}</p>
+
+            <p>Pattern Error: {{donForm.sample.$error.pattern}}</p>
+
+            <p>Element Valid:{{donForm.sample.$valid}}</p>
+        </div>
+    </form>
+</div>

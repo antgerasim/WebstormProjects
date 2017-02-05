@@ -1,0 +1,34 @@
+<!--use script element to define the markup required and select its contents through a template function-->
+<script type="text/ng-template" id="scopeTemplate">
+    <div class="panel-body">
+        <p>Name: <input type="text" ng-model="c.data.name"></p>
+
+        <p>City: <input type="text" ng-model="c.city"></p>
+
+        <p>Country: <input type="text" ng-model="c.country"></p>
+    </div>
+</script>
+<h2>Expanding the Example Directive in the .html File</h2>
+<div ng-controller="thirdCtrl as c">
+    <div class="panel panel-default">
+        <div class="panel-body" scope-demo3></div>
+        <div class="panel-body" scope-demo3></div>
+    </div>
+</div>
+<div class="panel well">
+    <div class="panel-body">
+        <p>Setting the scope property true allows me to reuse the directive within the same controller, and that means I
+            am able to remove the second controller and simplify the application. The simplification isn’t enormously
+            significant in a simple example like this one, but large projects are complex enough without having to
+            create endless controllers just to stop your directives from sharing data values. </p>
+
+        <p> I have reached the limits of using a string as the template, so I used a script element to
+            define the markup
+            I require and select its contents through a template function, as I described in the “Using a Function as a
+            Template”
+            section earlier in the chapter. The template contains three input elements, each of which is bound through
+            the
+            ng-model directive to a data value in the scope.</p>
+    </div>
+</div>
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="donXample3">
+<head>
+    <meta charset="UTF-8">
+    <title>exceptions</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script>
+        angular
+                .module('donXample3', ['ngRoute'])
+                .factory("$exceptionHandler", function ($log) {
+                    return function (exception, cause) {
+                        $log.error("Message: " + exception.message + " (Cause: " + cause + ")");
+                    }
+                });
+
+
+    </script>
+    <script src="javascripts/controllers/defaultCtrl6.js"></script>
+</head>
+<body ng-controller="defaultCtrl6 as c">
+<div class="panel panel-default">
+    <div class="panel-body">
+        <button class="btn btn-primary" ng-click="c.throwEx()">Throw Exception</button>
+    </div>
+</div>
+</body>
+</html>

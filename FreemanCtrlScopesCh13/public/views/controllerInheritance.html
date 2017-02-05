@@ -1,0 +1,45 @@
+<h2>Using Controller Inheritance in the controllerInheritance.html File</h2>
+<div id="topLevel" ng-controller="topLevelCtrl">
+    <div class="well">
+        <h4>Top Level Controller</h4>
+
+        <div class="input-group">
+            <span class="input-group btn">
+                <button class="btn btn-default" type="button" ng-click="reverseText()">Reverse<</button>
+                <button class="btn btn-default" type="button" ng-click="changeCase()">Case</button>
+            </span>
+            <input type="text" class="form-control" ng-model="dataValue">
+        </div>
+    </div>
+
+    <div class="well" ng-controller="firstChildCtrl">
+        <div class="input-group">
+            <span class="input-group btn">
+                <button class="btn btn-default" type="button" ng-click="reverseText()">Reverse<</button>
+                <button class="btn btn-default" type="button" ng-click="changeCase()">Case</button>
+            </span>
+            <input type="text" class="form-control" ng-model="dataValue">
+        </div>
+    </div>
+
+    <div class="well" ng-controller="secondChildCtrl">
+        <h4>Second Child Controller</h4>
+
+        <div class="input-group-btn">
+            <button class="btn btn-default" type="button" ng-click="reverseText()">Reverse</button>
+            <!--inherits from parent Controller-->
+            <button class="btn btn-default" type="button" ng-click="changeCase()">Case</button>
+            <button class="btn btn-default" type="button" ng-click="shiftFour()">Shift</button>
+            <input type="text" class="form-control" ng-model="dataValue">
+        </div>
+    </div>
+
+</div>
+
+<div>When looking for a behavior, AngularJS starts with the scope of the controller in which the directive has been
+    applied. If such a behavior exists, then it will be executed. If not, AngularJS moves up to the next level in the
+    scope
+    hierarchy and continues looking until a behavior with the specified name is found.
+</div>
+<!--
+336-->

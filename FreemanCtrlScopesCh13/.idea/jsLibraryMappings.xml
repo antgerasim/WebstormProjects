@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$" libraries="{FreemanCtrlScopesCh13 node_modules}" />
+    <file url="file://$PROJECT_DIR$/public/controllers/controllerInheritance.js" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/public/controllers/definingJqueryButtonCtrl.js" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/public/controllers/integratingJqueryWAngularCtrl.js" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/public/controllers/monolithicCtrl.js" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/public/controllers/multipleDistinctCtrls.js" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/public/controllers/rootscopeCtrl.js" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/public/controllers/rootscopeServiceCtrl.js" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/public/controllers/scopeLessSimpleCtrl.js" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/public/controllers/simpleCtrl.js" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/public/controllers/solvedControllerInheritance.js" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/public/controllers/updateScopeCtrl.js" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/public/scopes.html" libraries="{angularjs-DefinitelyTyped}" />
+    <includedPredefinedLibrary name="Node.js Core" />
+  </component>
+</project>

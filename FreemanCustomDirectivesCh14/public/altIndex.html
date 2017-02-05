@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="donXample">
+<head>
+    <title>Chapter14 - Creating Custom Directives</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script>
+
+        angular.module("donXample", [])
+                /*                .directive("unorderedList", function () {
+                 return function (scope, element, attrs) {
+                 // implementation code will go here
+                 var data = scope[attrs["unorderedList"]];
+                 if (angular.isArray(data)) {
+                 for (var i = 0; i < data.length; i++) {
+                 console.log("Item: " + data[i].name);
+                 }
+                 }
+                 }
+                 })*/
+                .controller("altDefaultCtrl", function ($scope) {
+                    $scope.products = [
+                        {name: "Apples", category: "Fruit", price: 1.20, expiry: 10},
+                        {name: "Bananas", category: "Fruit", price: 2.42, expiry: 7},
+                        {name: "Pears", category: "Fruit", price: 2.02, expiry: 6}
+                    ];
+                });
+
+        /*        (function () {
+         'use strict';
+
+         angular
+         .module('donXample', [
+         'ngRoute'
+         ])
+         .config(function ($routeProvider) {
+         $routeProvider
+         .when(
+         '/beginning', {
+         templateUrl: '/views/beginning.html'
+         }
+         )
+         .when('/training', {
+         templateUrl: '/views/training.html'
+         }
+         )
+         .otherwise({
+         templateUrl: '/views/start.html'
+         })
+
+         });
+
+         })();*/
+    </script>
+    <script src="controllers/defaultCtrl.js"></script>
+    <script src="directives/unorderedList.js"></script>
+
+</head>
+<body ng-controller="altDefaultCtrl">
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3>Products</h3>
+    </div>
+    <div class="panel-body">
+        <div unordered-list="products" donTestAttr="donTestAttribute"></div>
+    </div>
+</div>
+</body>
+</html>

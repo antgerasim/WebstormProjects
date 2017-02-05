@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Alerts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Bootstrap Alerts</h1>
+    <h2>Alerts</h2>
+    <p>Bootstrap provides an easy way to create predefined alert messages. Alerts are created with the
+        <code>.alert</code> class, followed by one of the four contextual classes <code>.alert-success</code>, <code>.alert-info</code>,
+        <code>.alert-warning</code> or <code>.alert-danger</code>:</p>
+    <div class="panel">
+        <div class="panel-heading">Example</div>
+        <div class="panel-body">
+            <div class="alert alert-success">
+                <a class="close" title="close" data-dismiss="alert" href="#">&otimes;</a>
+                <p><strong>Success!</strong> This alert box indicates a successful or positive action.</p>
+            </div>
+            <div class="alert alert-info">
+                <a href="#" class="close" title="titleClose" data-dismiss="alert">&times;</a>
+                <p><strong>Info!</strong> This alert box indicates a neutral informative change or action.</p>
+            </div>
+            <div class="alert alert-warning">
+                <a href="#" class="close" title="titleClose" data-dismiss="alert">&timesb;</a>
+                <p><strong>Warning</strong> This alert box indicates a warning that might need attention.</p>
+            </div>
+            <div class="alert alert-danger">
+                <a href="#" class="close" title="close" data-dismiss="alert">&otimesas;</a>
+                <p><strong> Danger!</strong> This alert box indicates a dangerous or potentially negative action.</p>
+            </div>
+        </div>
+    </div>
+    <h2>Closing Alerts</h2>
+    <p>To close the alert message, add <code>class="close"</code> and <code>data-dismiss="alert"</code> to a link or a
+        button element:</p>
+    <div class="panel">
+        <div class="panel-heading">Example</div>
+        <div class="panel-body">
+            <div class="alert alert-success">
+                <a href="" class="close" title="close" data-dismiss="alert">&times;</a>
+                <strong>Success!</strong> Indicates a successful or positive action.
+            </div>
+        </div>
+    </div>
+    <h2>Animated Alerts</h2>
+    <p>The <code>.fade</code> and <code>.in</code> classes adds a fading effect when closing the alert message:</p>
+    <div class="panel">
+        <div class="panel-heading">
+            Example
+        </div>
+        <div class="panel-body">
+            <div class="alert alert-warning fade in">
+                <a href="#" class="close" title="close" data-dismiss="alert">&times;</a>
+                <p><strong>Success!</strong> This alert box indicates a successful or positive action.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

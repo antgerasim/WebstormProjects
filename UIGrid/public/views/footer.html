@@ -1,0 +1,9 @@
+<h4>UI Grid Footer</h4>
+<div class="panel panel-primary" ng-controller="footerCtrl as fc">
+    <div class="panel-heading">Angular Grid</div>
+    <div class="panel-body">
+        <button id="footerButton" class="btn btn-success" ng-click="fc.toggleFooter()">Toggle Grid Footer</button>
+        <button class="btn btn-success" ng-click="toggleColumnFooter()">Toggle Column Footer</button>
+        <div id="grid1" ui-grid="fc.gridOptions" class="grid"></div>
+    </div>
+</div>

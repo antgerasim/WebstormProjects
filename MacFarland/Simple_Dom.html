@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>A web page</title>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+</head>
+<body class="home">
+<h1 id="header">A headline</h1>
+<p>Some <strong>important</strong> text</p>
+<div id="container">
+    <div id="errors">
+        <h2>Errors:</h2>
+    </div>
+</div>
+
+</body>
+</html>
+
+<script>
+    $(function(){
+/*        var result = $('#errors').html();
+        var newHtml = $('#errors').html('<p>There are four errors in this form</p>');
+        var newText = $('#errors').text('No errors found');*/
+        //var append = $('#errors').append('<h1>There are five errors in this form</h1>');
+        var prepend = $('#errors').append('<p>There are four errors in this form</p>');
+
+
+        //alert(newText);
+    });//end ready
+</script>
+
+
+
+<!-- Page 117-->

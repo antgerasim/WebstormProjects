@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="donXample">
+<head>
+    <title>Chapter 18 - Working with Modules and Services</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <!--    <script src="javascripts/services/services.js"></script>-->
+<!--    <script src="javascripts/services/services2.js"></script>
+    <script src="javascripts/services/services3.js"></script>-->
+ <!--   <script src="javascripts/services/services4.js"></script>-->
+    <script src="javascripts/services/services5.js"></script>
+    <script>
+        angular
+                .module('donXample', ['ngRoute', 'customDirectives', 'customServices4'])/*use your module*/
+                .config(function (logServiceProvider) {
+                    logServiceProvider.debugEnabled(true).messageCounterEnabled(false);
+                })
+                .config(function ($routeProvider) {
+                    $routeProvider
+                            .when('/beginning', {
+                                templateUrl: '/views/beginning.html'
+                            })
+                            .when('/training', {
+                                templateUrl: '/views/training.html'
+                            })
+                            .when('/definingnewmodule', {
+                                templateUrl: '/views/definingNewModule.html'
+                            })
+                            .when('/consumingservice', {
+                                templateUrl: '/views/consumingService.html'
+                            })
+                            .when('/usingservicemethod', {
+                                templateUrl: '/views/usingServiceMethod.html'
+                            })
+                            .when('/servicemethodwithoutprototypes',{
+                                templateUrl: '/views/serviceMethodWithoutPrototypes.html'
+                            })
+                            .when('/addfunctoproviderobj',{
+                                templateUrl: '/views/addFuncToProviderObj.html'
+                            })
+                            .otherwise({
+                                templateUrl: '/views/start.html'
+                            })
+                })
+    </script>
+    <script src="javascripts/directives/directives.js"></script>
+    <!--    must be after the inline script element.-->
+    <script src="javascripts/controllers/defaultCtrl.js"></script>
+    <script src="javascripts/directives/directives2.js"></script>
+    <script src="javascripts/controllers/defaultCtrlService.js"></script>
+    <script src="javascripts/controllers/defaultCtrlServiceMethod.js"></script>
+    <!--    <script src="javascripts/services/services.js"></script>-->
+
+</head>
+<body>
+<h1>Chapter 18 - Working with Modules and Services</h1>
+
+<div ng-view></div>
+</body>
+</html>
+
+<!--
+weiter mit 485 Adding Functions to the provider Object in the services.js File-->
+weiter mit chapter 19

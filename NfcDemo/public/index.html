@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="nfcApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script src="lib/angular-filter/dist/angular-filter.min.js"></script>
+    <script>
+        angular.module('nfcApp', ['ngRoute','angular.filter'])
+            .config(function ($routeProvider) {
+                $routeProvider
+                    .when('/something', {
+                        templateUrl: '/views/something.html'
+                    })
+                    .otherwise({
+                        templateUrl: '/views/start.html'
+                    })
+            });
+    </script>
+    <script src="javascripts/controller/mainCtrl.js"></script>
+    <script src="javascripts/service/crudService.js"></script>
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+                        <a href="#" class="navbar-brand">Application name</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">API</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container body-content">
+<!--    <h1>Angular Nfc-Demo</h1>-->
+    <br>
+    <div ng-view></div>
+</div>
+</body>
+</html>

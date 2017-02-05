@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="donXample">
+<head>
+    <title>CHAPTER 19 - Services for Global Objects, Errors,
+        and Expressions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script>
+        angular.module('donXample', ['ngRoute'])
+         /*       .config(function ($locationProvider) {
+                    $locationProvider.html5Mode(true);
+                })*/
+                .config(function ($anchorScrollProvider) {
+                    $anchorScrollProvider.disableAutoScrolling();
+                })
+                .factory("logService", function ($log) {
+                    var messageCount = 0;
+                    return{
+                        log: function (msg) {
+                            $log.log("(LOG + " + this.messageCount++ + ") " + msg);
+                        }
+                    }
+                })
+                .factory('$exceptionHandler', function ($log) {
+                    return function (exception, cause) {
+                        $log.error("Message: " + exception.message + " (Cause: " + cause + ")");
+                    }
+                })
+                .config(function ($routeProvider) {
+                    $routeProvider
+                            .when('/beginning', {
+                                templateUrl: '/views/beginning.html'
+                            })
+                            .when('/training', {
+                                templateUrl: '/views/training.html'
+                            })
+                            .when('/sdocumentservice', {
+                                templateUrl: '/views/sdocumentService.html'
+                            })
+                            .when('/sintervalservice', {
+                                templateUrl: '/views/sintervalService.html'
+                            })
+                            .when('/slocationserviceevents', {
+                                templateUrl: '/views/sLocationServiceEvents.html'
+                            })
+                            .when('/slocationprovider', {
+                                templateUrl: '/views/slocationProvider.html'
+                            })
+                            .when('/sanchorscrollservice',{
+                                templateUrl:'/views/sanchorScrollService.html'
+                            })
+                            .when('/sexceptionhandler',{
+                                templateUrl:'/views/sexceptionHandler.html'
+                            })
+                            .when('/serrorhandlerreplace',{
+                                templateUrl:'/views/serrorHandlerReplace.html'
+                            })
+                            .otherwise({
+                                templateUrl: '/views/start.html'
+                            })
+                })
+    </script>
+    <script src="javascripts/controllers/defaultCtrl.js"></script>
+    <script src="javascripts/controllers/defaultCtrl2.js"></script>
+    <script src="javascripts/controllers/defaultCtrl3.js"></script>
+    <script src="javascripts/controllers/defaultCtrl4.js"></script>
+    <script src="javascripts/controllers/defaultCtrl5.js"></script>
+    <script src="javascripts/controllers/defaultCtrl7.js"></script>
+</head>
+<body>
+<h1>CHAPTER 19 - Services for Global Objects, Errors, and Expressions</h1>
+
+<div ng-view></div>
+</body>
+</html>
+
+
+weiter mit 500

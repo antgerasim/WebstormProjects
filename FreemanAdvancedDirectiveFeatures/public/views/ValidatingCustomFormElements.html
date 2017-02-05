@@ -1,0 +1,114 @@
+<style>
+    *.error {
+        color: red;
+        font-weight: bold;
+    }
+</style>
+<script type="text/ng-template" id="triTemplate">
+    <div class="well">
+        <div class="btn-group">
+            <button class="btn btn-default">Yes</button>
+            <button class="btn btn-default">No</button>
+            <button class="btn btn-default">Not Sure</button>
+        </div>
+        <!--  Look at customFormsValDir.ctrl.$setValidity("confidence", valid);-->
+        <span class="error" ng-show="myForm.decision.$error.confidence">
+            You need to be sure
+        </span>
+    </div>
+</script>
+<h2>Adding Validation in the .html File</h2>
+<div ng-controller="defaultCtrl2">
+    <form name="myForm" novalidate>
+        <div>
+            <tri-button5 name="decision" ng-model="dataValue"></tri-button5>
+        </div>
+    </form>
+</div>
+
+<p>Most of the changes in this listing are for the standard form validation techniques that I described in Chapter
+    12. I have added a span element to the directive template whose visibility is keyed to a validation error called
+    confidence,
+    and I have added a form element to wrap the to wrap the triButton directive and applied the name attribute.
+    To perform the validation, I have defined a new function called validateParser, as follows:
+</p>
+
+<p>
+    var validateParser = function (value) {
+    var valid = (value == &quot;Yes&quot; || value == &quot;No&quot;);
+    ctrl.$setValidity(&quot;confidence&quot;, valid);
+    return valid ? value : undefined;
+    }
+</p>
+
+<p>Parser functions are passed the data-bound value and are responsible for checking to see whether it is valid.
+    The validity of a value is set with a call to the $setValidity method defined by the NgModel controller, where the
+    arguments are the key (used to display the validation message) and the validation status (expressed as a Boolean).
+    The parser function is also required to return undefined for invalid values. Parsers are registered by adding the
+    function to the $parsers array, defined by the NgModel controller, as follows:
+</p>
+<p><strong>ctrl.$parsers.push(validateParser);</strong></p>
+
+<p>A directive can have multiple parser functions, just as it can have multiple formatters. </p>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>$setPristine()</td>
+        <td>Returns the validation state of the control to pristine, which prevents validation from being
+            performed.
+        </td>
+    </tr>
+    <tr>
+        <td>$isEmpty()</td>
+        <td>Can be set to the directive to indicate when the control has no value. The default
+            implementation is intended for standard form elements and looks for values that are the empty
+            string, null, or undefined.
+        </td>
+    </tr>
+    <tr>
+        <td>$parsers</td>
+        <td>An array of functions used to validate the model value.</td>
+    </tr>
+    <tr>
+        <td>$error</td>
+        <td>Returns an object whose properties correspond to validation errors.</td>
+    </tr>
+    <tr>
+        <td>$pristine</td>
+        <td>Returns true if the control has not been modified by the user.</td>
+    </tr>
+    <tr>
+        <td>$dirty</td>
+        <td>Returns true if the control has been modified by the user.</td>
+    </tr>
+    <tr>
+        <td>$valid</td>
+        <td>Returns true if the model value is valid.</td>
+    </tr>
+    <tr>
+        <td>$invalid</td>
+        <td>Returns true if the model value is invalid.</td>
+    </tr>
+    </tbody>
+</table>
+<p>You may have wondered why you had to click the Yes button before clicking Not Sure to reveal the validation message.
+    The issue is that validation is not performed until the user interacts with the UI presented by the directive (or
+    more, accurately, when a new value is passed to the NgModel controller), so the parsers are not used until the model
+    changes. This isn't always what required and doesn't make sense for my example directive, but the problem can be
+    addressed by explicitly calling the parser function in the $render function, as shown below:
+</p>
+<p>
+<strong>    ctrl.$render = function () {
+    validateParser(ctrl.$viewValue);<br>
+    setSelected(ctrl.$viewValue || &quot;Not Sure&quot;);
+    }</strong>
+</p>
+
+

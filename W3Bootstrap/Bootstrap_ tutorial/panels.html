@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Bootstrap Panels</title>
+</head>
+<body>
+<div class="container">
+    <h1>Bootstrap Panels</h1>
+    <h2>Panels</h2>
+    <p>A panel in bootstrap is a bordered box with some padding around its content. Panels are created with the <code>.panel</code>
+        class, and content inside the panel has a <code>.panel-body</code> class:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <div class="panel">
+                <div class="panel-body">
+                    A basic Panel
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="don-note">
+        The <code>.panel-default</code> class is used to style the color of the panel. See the last example on this page
+        for more
+        contextual classes.
+    </div>
+    <hr>
+    <h2>Panel Heading</h2>
+    <p>The <code>.panel-heading</code> class adds a heading to the panel:</p>
+    <div class="panel well">
+        <div class="panel-heading">
+            <strong>Example</strong>
+        </div>
+        <div class="panel-body">
+            <div class="panel panel-default">
+                <div class="panel-heading">Panel Heading</div>
+                <div class="panel-body">Content</div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h2>Panel Footer</h2>
+    <p>The <code>.panel-footer</code> class adds a footer to the panel:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <div class="panel panel-default">
+                <div class="panel-body">Panel Content</div>
+                <div class="panel-footer">Panel Footer</div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h2>Panel Group</h2>
+    <p>To group many panels together, wrap a <code>&lt;div&gt;</code> with class <code>.panel-group</code> around them.
+        The <code>.panel-group</code> class clears the bottom-margin of each panel:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-body">Panel Content</div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-body">Panel Content</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h2>Panels with Contextual Classes</h2>
+    <p>To color the panel, use contextual classes (<code>.panel-default,</code> <code>.panel-primary</code>, <code>.panel-success</code>,
+        <code>.panel-info</code>,
+        <code>.panel-warning</code>, or <code>.panel-danger</code>):</p>
+    <div class="panel well">
+        <panel class="panel-heading"><strong>Example</strong></panel>
+        <div class="panel-body">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Panel with panel-default</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Panel with panel-primary class</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">Panel with panel-success class</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+                <div class="panel panel-info">
+                    <div class="panel-heading">Panel with panel-info class</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+                <div class="panel panel-warning">
+                    <div class="panel-heading">Panel with panel-warning class</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+                <div class="panel panel-danger">
+                    <div class="panel-heading">Panel with panel-danger class</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

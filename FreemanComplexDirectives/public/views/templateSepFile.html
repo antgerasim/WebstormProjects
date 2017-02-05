@@ -1,0 +1,27 @@
+<h2>Using an External Template</h2>
+<div ng-controller="defaultCtrl as c">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3>Products</h3>
+        </div>
+        <div class="panel-body">
+            <div unordered-list-sep-file-templ="products">
+                This is where the list will go
+            </div>
+        </div>
+    </div>
+    <div class="panel well">
+        <div class="panel-body">
+            <p>
+                The file contains the same simple template I used in previous examples, with some additional text to make the
+                source of the content clear. In Listing 16-10, I have set the templateUrl definition property to reference the file.
+            <p>
+                <!--  return angular.element(document.querySelector(&quot;#listTemplate&quot;)).html();-->
+            </p>
+
+            <p>
+
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide in Login Screen</title>
+    <link rel="stylesheet" href="css/site.css">
+    <style></style>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#open').click(function (evt) {
+                evt.preventDefault();
+                if ($('#login form').is(':hidden')) {
+                    $('#login form').fadeIn(300);
+                    $(this).addClass('close');
+                } else {
+                    $('#login form').slideUp(600);
+                    $(this).removeClass('close');
+                }
+            });//end click
+        });//end ready
+
+
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <header> JAVASCRIPT <span class="amp">&amp;</span> jQUERY: THE&nbsp;MISSING&nbsp;MANUAL</header>
+    <div class="content">
+        <div id="login">
+            <a href="form.html"><p id="open">Login</p></a>
+
+            <form>
+                <p>
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username">
+                </p>
+
+                <p>
+                    <label for="password">Password: </label>
+                    <input type="text" name="password" id="password">
+                </p>
+
+                <p class="button">
+                    <input type="submit" name="button" id="button" value="Submit">
+                </p>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<div class="main">
+    <h1>
+        <p> Slide in login button at the top of the page</p>
+    </h1>
+</div>
+</body>
+</html>

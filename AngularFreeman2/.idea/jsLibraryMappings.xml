@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$/public/admin.html" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/public/components/cart/cart.js" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/public/controllers/adminControllers.js" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/public/controllers/adminProductController.js" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/public/controllers/checkoutControllers.js" libraries="{ECMAScript 6, angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/public/controllers/productListControllers.js" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/public/controllers/sportStore.js" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/public/filters/customFilters.js" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/public/index.html" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/public/todo.html" libraries="{angularjs-DefinitelyTyped}" />
+    <includedPredefinedLibrary name="Node.js Core" />
+  </component>
+</project>

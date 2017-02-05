@@ -1,0 +1,36 @@
+<h2>Using the $anchorScroll Service in the domApi.html File</h2>
+<div ng-controller="defaultCtrl5 as c">
+    <div class="panel panel-default ">
+        <h4 class="panel-heading">URL</h4>
+
+        <div class="panel-body">
+            <p id="top">This is the top</p>
+            <button class="btn btn-primary" ng-click="c.show('bottom')">
+                Go to Bottom
+            </button>
+            <p>
+            <ul>
+                <li ng-repeat="item in c.items">{{item}}</li>
+            </ul>
+            </p>
+            <p id="bottom">This is the bottom</p>
+            <button class="btn btn-primary" ng-click="c.show('top')">Go to Top</button>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default ">
+    <div class="panel-heading">Description</div>
+    <div class="panel-body">
+        <p>The $anchorScroll service is unusual because you don't have to use the service object; you just declare a
+            dependency. When the service object is created, it starts to monitor the $location.hash value and scrolls
+            automatically when it changes. You can see the effect in Figure.</p>
+        <p>
+            You can disable the automatic scrolling through the service provider, which allows you to selectively scroll by
+            invoking the $anchorScroll service as a function.
+        </p>
+        <p>
+
+        </p>
+    </div>
+</div>

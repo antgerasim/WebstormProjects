@@ -1,0 +1,11 @@
+<h2>Using the service Method Without Prototypes in the services.js File</h2>
+<div ng-controller="defaultCtrlServiceMethod as c">
+    <div class="well">
+        <div class="btn-group" tri-button2="" counter="c.data.totalClicks" source="c.data.cities">
+            <button class="btn btn-default" ng-repeat="city in c.data.cities">
+                {{city}}
+            </button>
+        </div>
+        <h5>Total Clicks: {{c.data.totalClicks}}</h5>
+    </div>
+</div>

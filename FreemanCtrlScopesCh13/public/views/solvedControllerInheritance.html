@@ -1,0 +1,90 @@
+<h2>Solving the Inheritance Problem in the controllerInheritance.html File</h2>
+<div id="topLevel" ng-controller="solvedTopLevelCtrl">
+    <div class="well">
+        <h4>Top Level Controller</h4>
+
+        <div class="input-group">
+            <span class="input-group btn">
+                <button class="btn btn-default" type="button" ng-click="reverseText()">Reverse<</button>
+                <button class="btn btn-default" type="button" ng-click="changeCase()">Case</button>
+            </span>
+            <input type="text" class="form-control" ng-model="data.dataValue">
+        </div>
+    </div>
+
+    <div class="well" ng-controller="firstChildCtrl">
+        <div class="input-group">
+            <span class="input-group btn">
+                <button class="btn btn-default" type="button" ng-click="reverseText()">Reverse<</button>
+                <button class="btn btn-default" type="button" ng-click="changeCase()">Case</button>
+            </span>
+            <input type="text" class="form-control" ng-model="data.dataValue">
+        </div>
+    </div>
+
+    <div class="well" ng-controller="secondChildCtrl">
+        <h4>Second Child Controller</h4>
+
+        <div class="input-group-btn">
+            <button class="btn btn-default" type="button" ng-click="reverseText()">Reverse</button>
+            <!--inherits from parent Controller-->
+            <button class="btn btn-default" type="button" ng-click="changeCase()">Case</button>
+            <button class="btn btn-default" type="button" ng-click="shiftFour()">Shift</button>
+            <input type="text" class="form-control" ng-model="data.dataValue">
+        </div>
+    </div>
+
+</div>
+<blockquote>
+    Instead of defining dataValue as a property directly on the scope of the parent controller,
+    I have defined it as a
+    property of an object called data. The other changes in this file update the reference to the dataValue property
+    to
+    access it via the data object. In Listing 13-12, you can see how I have reflected this change in the ng-model
+    directives
+    that link the input elements with the dataValue property in the controllers.html file.
+</blockquote>
+
+<div class="panel">
+    <div class="panel-body">
+        Instead of defining dataValue as a property directly on the scope of the parent controller,
+        I have defined it as a
+        property of an object called data. The other changes in this file update the reference to the dataValue property
+        to
+        access it via the data object. In Listing 13-12, you can see how I have reflected this change in the ng-model
+        directives
+        that link the input elements with the dataValue property in the controllers.html file.
+
+        How does it works?
+        When you read the value of a property that is defined directly on the scope, AngularJS checks to see whether
+        there is a local property in the controller’s scope and, if not, starts working its way up the scope hierarchy to see
+        whether it has inherited one. However, when you use the ng-model directive to modify such a property, AngularJS
+        checks to see whether the scope has a property of the right name and, if not, assumes you want to implicitly define it.
+        The effect is to override the property value, much as I did with the behavior in the previous section. The reason that
+        editing the contents of a child input element prevents the Reverse button from working is that there are now two
+        dataValue properties—one defined by the top-level controller and one by the child you edited. The reverseText
+        behavior is defined by the top-level controller, and it operates on the dataValue defined in the top-level scope, leaving
+        the child’s dataValue property unaltered.
+        This doesn’t happen when you assign an object to the scope and then define your data properties on that object.
+        This is because JavaScript implements what is known as prototype inheritance—a topic so dry and confusing that
+        I am not going to attempt to explain it here, although I describe the basics in Chapter 18. What is important is the
+        knowledge that defining properties directly on the scope like this:
+        ...
+        $scope.dataValue = "Hello, Adam";
+        ...
+        means that using the ng-model directive will create local variables, while using an object as an intermediary,
+        like this:
+        ...
+        $scope.data = {
+        dataValue: "Hello, Adam"
+        }
+        ...
+        ensures that ng-model will update the data values defined in the parent scope. This is not a bug. It is a deliberate feature
+        that allows you to decide how your controller and its scope will work, and you can mix and match both techniques in the
+        same scope. If you want a value that is initially shared but will be copied when modified, then define your data properties
+        directly on the scope. To ensure that there is only one value, then define your data properties via an object.
+
+    </div>
+</div>
+<!--
+336-->

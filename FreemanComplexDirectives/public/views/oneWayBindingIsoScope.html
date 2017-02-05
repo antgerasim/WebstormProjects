@@ -1,0 +1,15 @@
+<script type="text" id="scopeTemplate">
+<div class="panel-body">
+    <p>Data Value: {{local}}</p>
+</div>
+</script>
+
+<h2>Creating a One-Way Binding for an Isolated Scope in the .html File</h2>
+<div ng-controller="secondCtrl as c">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            Direct Binding: <input ng-model="c.data.name">
+        </div>
+        <div class="panel-body" scope-demo4 nameprop="{{c.data.name}}"></div>
+    </div>
+</div>

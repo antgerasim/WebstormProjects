@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <title>Bootstrap Form Inputs (more)</title>
+</head>
+<body>
+<div class="container">
+    <h1>Bootstrap Form Inputs (more)</h1>
+    <h2>Static Control</h2>
+    <p>If you need to insert <strong>plain text</strong> next to a form label within a horizontal form, use the <code>.form-control-static</code>
+        class on a <code>&lt;p&gt;</code> element:</p>
+    <div class="panel well">
+        <div class="panel-heading">
+            <strong>Example</strong>
+        </div>
+        <div class="panel-body">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Email:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static">someone@example.com</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <hr>
+    <h2>Bootstrap Form Control States</h2>
+    <p>
+    <ul>
+        <li><strong>INPUT FOCUS</strong> - The outline of the input is removed and a box-shadow is applied on focus</li>
+        <li><strong>DISABLED INPUTS</strong> - Add a disabled attribute to disable an input field</li>
+        <li><strong>DISABLED FIELDSETS</strong> - Add a disabled attribute to a fieldset to disable all controls within</li>
+        <li><strong>READONLY INPUTS</strong> - Add a readonly attribute to an input to prevent user input</li>
+        <li><strong>VALIDATION STATES</strong> - Bootstrap includes validation styles for error, warning, and success messages. To use,
+            add <code>.has-warning</code>, <code>.has-error</code>, or <code>.has-success</code> to the parent element
+        </li>
+        <li><strong>ICONS</strong> - You can add feedback icons with the <code>.has-feedback</code> class and an icon</li>
+        <li><strong>HIDDEN LABELS</strong> - Add a <code>.sr-only</code> class on non-visible labels</li>
+    </ul>
+    <p>The following example demonstrates some of the form control states above in a <strong>Horizontal form</strong>:</p>
+    </p>
+
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Focused</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="focusedInput" type="text" value="Click to focus">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="col-sm-2 control-label">Disabled</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="disabledInput" type="text" disabled>
+                    </div>
+                </div>
+                <fieldset disabled>
+                    <div class="form-group">
+                        <label for="disabledTextInput" class="col-sm-2 control-label">Fieldset disabled</label>
+                        <div class="col-sm-10">
+                            <input type="text" id="disabledTextInput" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="disabledSelect" class="col-sm-2 control-label"></label>
+                        <div class="col-sm-10">
+                            <select id="disabledSelect" class="form-control">
+                                <option>Disabled select</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="form-group has-success has-feedback">
+                    <label class="col-sm-2 control-label" for="inputSuccess">
+                        Input with success and icon</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputSuccess">
+                        <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                    </div>
+                </div>
+                <div class="form-group has-warning has-feedback">
+                    <label class="col-sm-2 control-label" for="inputWarning">
+                        Input with warning and icon</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputWarning">
+                        <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+                    </div>
+                </div>
+                <div class="form-group has-error has-feedback">
+                    <label class="col-sm-2 control-label" for="inputError">
+                        Input with error and icon</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputError">
+                        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

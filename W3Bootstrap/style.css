@@ -1,0 +1,26 @@
+.spytest {
+    height: 255px;
+    width: 100%;
+}
+
+.bg-warning {
+    margin: 10px 20px 20px 0px !important;
+    padding: 10px 50px 10px 50px !important;
+    border-radius: 60px !important;
+    border-left: 6px solid #ffeb3b;
+}
+
+.don-note{
+
+    margin: 10px 20px 20px 0px !important;
+    padding: 10px 50px 10px 50px !important;
+    border-radius: 60px !important;
+    border-left: 6px solid #ffeb3b;
+    background: #fdfdcb;
+}
+
+.carousel-inner > .item > img {
+    margin: 0 auto;
+/*    http://stackoverflow.com/questions/10591422/bootstrap-carousel-image-doesnt-align-properly*/
+}
+

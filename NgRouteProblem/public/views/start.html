@@ -1,0 +1,53 @@
+<h2>Start</h2>
+
+<a href="#/training">
+    <button class="btn btn-primary">Training</button>
+</a>
+
+<p>Seems that since angular 1.6 each ng-route url should be prefixed with #!</p>
+<p>EXAMPLE:</p>
+
+<div><p>&lt;a href=&quot;#!/training&quot;&gt;</p>
+    &lt;button class=&quot;btn btn-primary&quot;&gt;Modal&lt;/button&gt;
+    <p>&lt;/a&gt;</p>
+</div>
+
+<p>You can adhere to the older url schema by adding $locationProvider.hashPrefix(""); to angular.module.config </p>
+
+
+<a href="https://docs.angularjs.org/guide/$location#hashbang-mode-default-mode-">Hashbang mode (default mode)</a>
+
+<div>
+    <h3>Migrating from 1.5 to 1.6</h3>
+    <p>Angular 1.6 fixes numerous bugs and adds new features, both in core and in external modules. In addition, it
+        includes several security and performance improvements in commonly used services, such as $compile, $injector,
+        $parse, $animate, and directives, such as input, ngModel and select.</p>
+    <p>The most notable changes are:</p>
+    <ul>
+        <li>Aligning jqLite with the latest version of jQuery (3.x).</li>
+        <li>Implementing long awaited features, such as support for inputs of type range and the ability to bind to any
+            type of values using ngRepeat with select.
+        </li>
+        <li>Disabling (by default) the pre-assignment of bindings on controller instances, which helps with support for
+            native ES6 classes.
+        </li>
+        <li><strong>Changing the default $location hash-prefix to '!', as the previous empty string default was
+            unconventional
+            and confusing.</strong>
+        </li>
+        <li>Reporting possibly unhandled promise rejections that would otherwise go unnoticed.</li>
+    </ul>
+
+    <p>To give you a heads-up, here is a brief summary of the breaking changes that are expected to have the highest
+        impact. Make sure you look them up in the full list below or check out the corresponding commits for more
+        info.</p>
+
+    <ul>
+        <li><strong>$location now uses '!' as the default hash-prefix for hash-bang URLs, instead of the empty
+            string. </strong>(<a
+                href="https://docs.angularjs.org/guide/migration#commit-aa077e8">Details</a>)
+        </li>
+    </ul>
+
+</div>
+<a href="https://docs.angularjs.org/guide/migration#migrating-from-1-5-to-1-6">Angular Docs</a>

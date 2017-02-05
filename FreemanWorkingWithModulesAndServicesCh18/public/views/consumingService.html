@@ -1,0 +1,27 @@
+<h2>Consuming the Service in the example.html File</h2>
+
+<div ng-controller="defaultCtrlService as c">
+    <div class="well">
+        <div class="btn-group" tri-button2="" counter="c.data.totalClicks" source="c.data.cities">
+            <button class="btn btn-default" ng-repeat="city in c.data.cities">
+                {{city}}
+            </button>
+        </div>
+        <h5>Total Clicks: {{c.data.totalClicks}}</h5>
+    </div>
+</div>
+
+<p>Why using a service compared to a simple console.log statement? There're a lot of benefits. The first is that I can
+    disable logging throughout the entire application by commenting out one line in the services.js file, rather than
+    having to search through the application looking for console.log calls. </p>
+<p>This might not be a big deal in this simple example app, but it is a big deal in a real project made up of many large
+    and complex files.</p>
+<p>The second benefit is that the consumers of the service have no insight into or dependency on its
+    implementation. The controller and directive in this example know that there's a logService, and they know that it
+    defines a method called log, but that's all - and that means I can completely change the way that logging is
+    performed without having to make any changes outside of the service object.</p>
+<p>The final benefit is that I can isolate and test the logging functionality seperately from the rest of the
+    application, using the techniques I describe in Chapter 25.</p>
+<p>In short, services let you build common functionality without breaking the MVC pattern-something that becomes
+    increasingly important as your projects grow in scale and complexity. And, as you'll learn, some important AngularJS
+    features are provided through a set of built-in services.</p>

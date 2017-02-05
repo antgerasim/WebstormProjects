@@ -1,0 +1,17 @@
+<div id="todoPanel" class="panel" ng-controller="optGroupElementsCtrl as c">
+    <form name="donForm" novalidate>
+        <div class="well">
+            <div class="form-group">
+                <label>Select an Action:</label>
+                <select ng-model="selectValue" ng-options="item.action group by item.place for item in c.todos">
+                    <option value="">(Pick One)</option>
+                </select>
+            </div>
+        </div>
+        <div class="well">
+            <p>Selected: {{selectValue || 'None'}}</p>
+        </div>
+    </form>
+</div>
+
+weiter mit 318

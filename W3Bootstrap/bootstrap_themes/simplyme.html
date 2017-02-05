@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Theme Simply Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat">
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<style>
+
+    body {
+        font: 15px "Montserrat", sans-serif;
+        line-height: 1.8;
+        color: #f5f6f7;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .bg-1 {
+        background-color: #1abc9c; /* Green */
+        color: #ffffff;
+    }
+
+    .bg-2 {
+        background-color: #474e5d; /* Dark Blue */
+        color: #ffffff;
+    }
+
+    .bg-3 {
+        background-color: #ffffff; /* White */
+        color: #555555;
+    }
+
+    .bg-4 {
+        background-color: #2f2f2f;
+        color: #ffffff;
+    }
+
+    .container-fluid {
+        padding: 70px;
+        /*        padding-top: 70px;
+                padding-bottom: 70px;*/
+    }
+
+    .navbar {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 0;
+        font-size: 12px;
+        letter-spacing: 5px;
+    }
+
+    .margin {
+        margin-bottom: 45px;
+    }
+
+
+</style>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Me</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Who</a></li>
+                <li><a href="#">What</a></li>
+                <li><a href="#">Where</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- The circular bird -->
+<div class="container-fluid bg-1 text-center">
+    <h3 class="margin">Who Am I?</h3>
+    <img src="../images/bird.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird">
+    <!--    <img src="images/bird.jpg" class="img-circle" alt="Bird">-->
+    <h3>I'm an adventurer</h3>
+</div>
+
+<div class="container-fluid bg-2 text-center">
+    <h3 class="margin">What Am I?</h3>
+
+    <p class="margin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, corporis delectus dolor hic in ipsam iste
+        laboriosam magni minima necessitatibus nesciunt praesentium provident quis quos ratione sed tempore totam
+        vitae!</p>
+    <a href="#" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-search"> Search</span>
+    </a>
+</div>
+
+<div class="container-fluid bg-3 text-center">
+    <h3 class="margin">Where to find me?</h3>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam cumque facere harum in modi molestias
+                neque omnis, pariatur qui ratione repellat, repudiandae velit veniam voluptatum.</p>
+            <img src="../images/birds1.jpg" class="img-responsive margin" style="display:inline" alt="Image">
+        </div>
+        <div class="col-sm-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam cumque facere harum in modi molestias
+                neque omnis, pariatur qui ratione repellat, repudiandae velit veniam voluptatum.</p>
+            <img src="../images/birds2.jpg" class="img-responsive margin" style="display: inline" alt="Image">
+        </div>
+        <div class="col-sm-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam cumque facere harum in modi molestias
+                neque omnis, pariatur qui ratione repellat, repudiandae velit veniam voluptatum.</p>
+            <img src="../images/birds3.jpg" class="img-responsive margin" style="display: inline" alt="Image">
+        </div>
+    </div>
+    <p>Lorem ipsum dolor.</p>
+</div>
+<footer class="container-fluid bg-4 text-center">
+    <p>Bootstrap Theme Made By <a href="http://www.w3schools.com">www.w3schools.com</a></p>
+
+</footer>
+</body>
+</html>

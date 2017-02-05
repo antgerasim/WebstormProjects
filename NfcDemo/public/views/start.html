@@ -1,0 +1,169 @@
+<div class="page-header">
+    <h1 class="h1">NFCDemo</h1>
+</div>
+
+<div ng-controller="mainCtrl as mc">
+    <!--    @*enter search*@-->
+    <div class="row">
+        <div class="col-md-4">
+            <div class="input-group">
+                <span class="input-group-btn">
+                <button class="btn btn-secondary" type="button">Go!</button>
+            </span>
+                <input ng-model="searchQuery" class="form-control" placeholder="Введите номер ИНН" type="text">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="alert alert-danger" ng-show="mc.data.error">
+                Error ({{mc.data.error.status}}). Данные о поставщике не загрузились.
+                <a href="/app.html" class="alert-link">Кликни здесь и попробуй снова</a>
+            </div>
+        </div>
+    </div>
+    <br/>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Найдены Поставщики</h2>
+                </div>
+                <div class="panel-body">
+                    <table class="table small table-striped  table-responsive" ng-show="mc.isShown">
+                        <thead>
+                        <tr>
+                            <th>ИНН</th>
+                            <th>Поставщик</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="supp in mc.data.suppliers | filter:searchQuery">
+                            <td>{{supp.Inn}}</td>
+                            <td>{{supp.CompanyName}}</td>
+                            <td>
+                                <small>
+                                    <a href="#" class="btn btn-xs btn-info"
+                                       ng-click="mc.getSupplierDetails(supp.id)">Details</a>
+                                </small>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6" ng-show="mc.details.isShown">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Результат</h2>
+                </div>
+                <div class="panel-body">
+                    <table class="table small table-responsive">
+                        <thead>
+                        <tr>
+                            <th>Инн:</th>
+                            <th>Количество поставок:</th>
+                            <th>Сумма поставок:</th>
+                            <th>Валюта:</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>{{mc.details.supplierInn}}</td>
+                            <td>{{mc.details.totalDeliveryCount}}</td>
+                            <td>{{mc.details.totalDeliverySum|currency:'руб.'}}</td>
+                      <!--      <td>{{mc.details.deliveryCurrency}}</td>-->
+                            <td><span ng-repeat="cur in mc.details.deliveryCurrency">{{cur}}{{$last ? '' : ', '}}</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2" ng-show="mc.showSupplierDetails">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Добавление</h2>
+                </div>
+                <div class="panel-body">
+
+                    <table class="table small table-responsive">
+                        <tr>
+                            <div class="btn-group-vertical">
+
+                                <button type="button" ng-click="mc.addNewSupplier()" class="btn btn-warning btn-xs">+ Поставщик</button>
+                                <button type="button" ng-click="mc.addNewDelivery()" class="btn btn-warning btn-xs">+ Поставка</button>
+                            </div>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+<!--        Новый поставщик -->
+        <div class="panel-body">
+<!--            <button type="button" class="btn btn-info" >Add New Member</button>-->
+            <script type="text/ng-template" id="addNewSupplier.html">
+                <form class="form-horizontal" name="saveUpdateForm" novalidate role="form">
+                    <div class="modal-header">
+                        <button type="button" class="close" ng-click="$instc.cancel()">&times;</button>
+                        <h3 class="text-info">{{$instc.title}}</h3>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="form-group">
+                            <label class="text-info">Member Name</label>
+                            <input class="form-control" name="Member Name" ng-model="$instc.editableMember.username" type="text" placeholder="Member Name" required />
+                        </div>
+                        <div class="form-group">
+                            <label class="text-info">Password</label>
+                            <input class="form-control" name="Password" ng-model="$instc.editableMember.password" type="text" placeholder="Password" required />
+                        </div>
+                        <div class="form-group">
+                            <label class="text-info">Email Address</label>
+                            <input class="form-control" name="Email Address" ng-model="$instc.editableMember.email_address" type="email" placeholder="Email Address" required />
+                        </div>
+                        <div class="form-group">
+                            <label class="text-info">Email Address Alt</label>
+                            <input class="form-control" name="Email Address Alt" ng-model="$instc.editableMember.email_address_alt" type="email" placeholder="Email Address Alt" required />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        @*      <button type="button" class="btn btn-success" ng-click="$instc.ok(editableMember)">Save</button>*@
+                        <input type="submit" class="btn btn-primary" value="submit" ng-click="$instc.submitForm()" />
+                        <button type="button" class="btn btn-default" ng-click="$instc.cancel()">Close</button>
+                    </div>
+                </form>
+            </script>
+            @*Delete Employee record*@
+            <script type="text/ng-template" id="deleteMember.html">
+                <form class="form-horizontal" name="deleteMember" novalidate role="form">
+                    <div class="modal-header">
+                        <button type="button" class="close" ng-click="$instc.cancel()">&times;</button>
+                        <h3 class="text-info">Are you sure you want to delete the record?</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <p>Id: {{$instc.deletableMember.id}}</p>
+                            <p>Member Name: {{$instc.deletableMember.username}}</p>
+                            <p>Password: {{$instc.deletableMember.password}}</p>
+                            <p>Email address: {{$instc.deletableMember.email_address}}</p>
+                            <p>Email address alt.: {{$instc.deletableMember.email_address_alt}}</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" class="btn btn-danger" value="Delete" ng-click="$instc.deleteMember()" />
+                        <button type="button" class="btn btn-default" ng-click="$instc.cancel()">Close</button>
+                    </div>
+                </form>
+            </script>
+            <br />
+        </div>
+        <div class="panel-footer"></div>
+
+
+    </div>
+
+</div>
+

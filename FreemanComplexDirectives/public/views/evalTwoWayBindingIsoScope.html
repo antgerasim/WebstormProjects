@@ -1,0 +1,15 @@
+<script type="text/ng-template" id="scopeTemplate">
+    <div class="panel-body">
+        <p>Name: {{local}}, City: {{cityFn()}}</p>
+    </div>
+</script>
+<h2>Evaluating an Expression in the Controller Scope in the .html File</h2>
+<div ng-controller="evalCtrl as c">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            Direct Binding: <input type="text" ng-model="c.data.name">
+        </div>
+        <div class="panel-body" scope-demo6 city="c.getCity(c.data.name)" nameprop="c.data.name"></div>
+    </div>
+</div>
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../bower_components/angular/angular.min.js"></script>
+
+    <style>
+
+    </style>
+
+    <script>
+        var app = angular.module('myShoppingList', []);
+        app.controller('donCtrl', donCtrl);
+        function donCtrl() {
+            var vm = this;
+            var charLimit = 100;
+            vm.save = save;
+            vm.clear = clear;
+            vm.left = left;
+            vm.toUpper = toUpper;
+            vm.message = '';
+
+            function save() {
+                alert("Note Saved");
+            }
+
+            function clear() {
+                vm.message = '';
+            }
+
+            function left() {
+                //return vm.message += 'd';
+                //var i = vm.message.concat("d");
+                var i = charLimit - vm.message.length;
+                return i;
+            }
+
+            function toUpper() {
+                return angular.uppercase(vm.message);
+            }
+        }
+
+    </script>
+</head>
+<body ng-app="myShoppingList">
+<div ng-controller="donCtrl as don">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>My Note</h1>
+
+                <p>
+                    <textarea class="form-control" ng-model="don.message" name="tAreaN" id="1" cols="30"
+                              rows="10"></textarea>
+                </p>
+
+                <p>
+                    <button class="btn" ng-click="don.save()">Save</button>
+                    <button class="btn" ng-click="don.clear()">Clear</button>
+                </p>
+
+                <p>Number of characters left: {{don.left()}}</p>
+
+                <p ng-bind="don.left()"></p>
+
+                <p>{{don.toUpper()}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,22 @@
+<div id="todoPanel" ng-controller="additionAttributesTextArea as c">
+    <form name="donForm" novalidate>
+        <div class="well">
+            <div class="form-group">
+            <textarea name="sample" id="" cols="40" rows="3" ng-model="textValue" ng-required="c.requireValue"
+                      ng-minlength="3" ng-maxlength="10" ng-pattern="c.matchPattern">
+            </textarea>
+            </div>
+        </div>
+        <div class="well">
+            <p>Required Error: {{donForm.sample.$error.required}}</p>
+
+            <p>Min Length Error: {{donForm.sample.$error.minlength}}</p>
+
+            <p>Max Length Error: {{donForm.sample.$error.maxlength}}</p>
+
+            <p>Pattern Error: {{donForm.sample.$error.pattern}}</p>
+
+            <p>Element Valid: {{donForm.sample.$valid}}</p>
+        </div>
+    </form>
+</div>

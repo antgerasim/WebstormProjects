@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sportsStore">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportStore Training</title>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script src="lib/angular-resource/angular-resource.min.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+    <script>
+
+        var app = angular.module("sportsStore", ["ngRoute"]);
+        app.config(function($routeProvider) {
+            $routeProvider
+                    .when("/", {
+                        templateUrl : "main.htm"
+                    })
+                    .when("/red", {
+                        templateUrl : "red.htm"
+                    })
+                    .when("/green", {
+                        templateUrl : "green.htm"
+                    })
+                    .when("/blue", {
+                        templateUrl : "blue.htm"
+                    });
+        });
+/*        angular.module("sportsStore", ["customFilters", "cart", "ngRoute"])//define/create new module by adding []!
+                .config(function ($routeProvider) {
+                    $routeProvider
+                            .when("/checkout", {
+                                templateUrl: "/views/checkoutSummary.html"
+                            })
+                            .when("/products", {
+                                templateUrl: "/views/productList.html"
+                            })
+                            .when("/complete", {
+                                templateUrl: "/views/thankYou.html"
+                            })
+                            .when("/placeorder", {
+                                templateUrl: "/views/placeOrder.html"
+                            })
+                            .otherwise({
+                                templateUrl: "/views/productList.html"
+                            });
+                });*/
+
+
+    </script>
+
+</head>
+<body>
+<div>
+<ng-view></ng-view>
+</div>
+</body>
+</html>

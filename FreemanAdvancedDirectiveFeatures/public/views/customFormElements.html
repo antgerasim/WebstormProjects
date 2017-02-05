@@ -1,0 +1,43 @@
+<script type="text/ng-template" id="triTemplate">
+    <div class="well">
+        <div class="btn-group">
+            <button class="btn btn-default">Yes</button>
+            <button class="btn btn-default">No</button>
+            <button class="btn btn-default">Not Sure</button>
+        </div>
+    </div>
+</script>
+<h2>Creating Custom Form Elements</h2>
+<div ng-controller="defaultCtrl2">
+    <div>
+        <tri-button ng-model="dataValue"/>
+    </div>
+    <div class="well">
+        Value:
+        <select ng-model="dataValue">
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+        </select>
+    </div>
+</div>
+
+<p>Structure only, nothing works!</p>
+
+<p>This listing defines the structure of my custom form element but doesn’t yet use the API. I am going to explain
+    how my control will work and then apply the new techniques. As it stands, this example doesn’t contain anything new.
+    I have created a directive called triButton that can be applied as an element and presents the user with three
+    button
+    elements that have been styled using Bootstrap. I have declared a dependency on the ngModel controller (which is the
+    controller defined by the ng-model directive since AngularJS normalizes names), and I have added the ctrl argument
+    to the link function.
+    I defined a function called setSelected within the link function that I use to highlight the button element that
+    represents the form value that my directive displays. I do this by using jqLite to add and remove a Bootstrap class;
+    you can see the effect in Figure 17-5.</p>
+
+<p>This applies the directive to my custom element and sets up a two-way binding to the dataValue property on the
+    scope. My goal is to use the ngModel controller API to implement that binding within my triButton directive.
+    I included a select element that is bound to the dataValue property as well. This isn’t part of my custom
+    directive, but since I am implementing a two-way data binding, I need to be able to show the effect of the user
+    changing the dataValue value through the custom directive and how to receive and handle notification that the value
+    has been changed elsewhere.</p>

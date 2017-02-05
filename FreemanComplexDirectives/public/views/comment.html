@@ -1,0 +1,26 @@
+<h2>Setting the restrict Option in the directives.html File</h2>
+<div ng-controller="defaultCtrl as c">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3>Products</h3>
+        </div>
+    </div>
+    <div class="panel-body">
+
+ <!--        directive: unordered-list-restrict products-->
+    </div>
+</div>
+
+<div class="panel well">
+    <div class="panel-body">
+        <p>I apply the directive as an unordered-list element, which I configure using attributes. This requires me to
+            make
+            a change to the link function for the directive because the source of the data has to be defined with a new
+            attribute.
+            I have selected the name list-source for the new attribute, and you can see how I check for the value of the
+            attribute
+            if there is no unordered-list attribute value available:</p>
+
+        <p>&lt;div unordered-list=&quot;products&quot; list-property=&quot;price | currency&quot;&gt;&lt;/div&gt;</p>
+    </div>
+</div>

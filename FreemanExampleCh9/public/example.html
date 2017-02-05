@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="donExampleApp"><!--define in HTML tag if angular is the only web framework being used-->
+<head>
+    <meta charset="UTF-8">
+    <title>DonExampleApp</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script src=""></script>
+    <script>
+        (function () {
+            'use strict';
+
+            var now = new Date();
+            angular//fluent API - multiple calls to methods are chained together
+                    .module('donExampleApp', ['ngRoute', 'donExampleApp.Controllers', 'donExampleApp.Services',
+                        'donExampleApp.ServiceValues', 'donExampleApp.ControllersServiceValues', 'donExampleApp.Filters',
+                        'donExampleApp.DirectivesHighlight', 'donExampleApp.DirectivesHighlight2'])/* 'requires argument []' must be in place. Returns a module object*/
+                    .value("nowValue", now)
+                    .config(function ($routeProvider) {
+                        $routeProvider
+                                .when('/controllers', {
+                                    templateUrl: '/views/controllers.html'
+                                })
+                                .when('/directives', {
+                                    templateUrl: '/views/directives.html'
+                                })
+                                .when('/filters', {
+                                    templateUrl: '/views/filters.html'
+                                })
+                                .when('/services', {
+                                    templateUrl: '/views/services.html'
+                                })
+                                .otherwise({
+                                    templateUrl: '/views/start.html'
+                                });
+                    })
+                    .constant('startTime', new Date().toLocaleTimeString())
+                    .config(function (startTime) {
+                        console.log('Main module config: ' + startTime);
+                    })
+                    .run(function (startTime) {
+                        console.log("Main module run: " + startTime)
+                    })
+            ;
+        })();
+    </script>
+    <script src="controllers/controllers.js"></script>
+    <script src="directives/directives.js"></script>
+    <script src="filters/filters.js"></script>
+    <script src="services/services.js"></script>
+    <script src="services/servicesValues.js"></script>
+    <script src="controllers/controllersServiceValues.js"></script>
+</head>
+<body class="container">
+
+<div ng-view></div>
+
+
+</body>
+</html>
+
+<!--
+weiter mit 224-->

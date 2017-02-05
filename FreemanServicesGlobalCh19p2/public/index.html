@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="donXample">
+<head>
+    <title>CHAPTER 19 - Services for Global Objects, Errors,
+        and Expressions: PART 2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
+    <script>
+        angular
+            .module('donXample',['ngRoute','ngSanitize'])
+                .config(function ($routeProvider) {
+                    $routeProvider
+                            .when('/beginning',{
+                                templateUrl: '/views/beginning.html'
+                            })
+                            .when('/displayingtrusteddata',{
+                                templateUrl:'/views/displayingTrustedData.html'
+                            })
+                            .otherwise({
+                                templateUrl:'/views/start.html'
+                            })
+                })
+    </script>
+    <script src="javascripts/controllers/defaultCtrl1.js"></script>
+</head>
+<body>
+<h1>CHAPTER 19 - Services for Global Objects, Errors,
+    and Expressions: PART 2</h1>
+<div ng-view></div>
+</body>
+</html>
+
+weiter mit 509

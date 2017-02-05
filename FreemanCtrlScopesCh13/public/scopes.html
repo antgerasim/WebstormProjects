@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="donXample">
+<head>
+    <title>Chapter13 - Controllers & Scopes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="lib/jquery-ui/themes/sunny/jquery-ui.css">
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/jquery-ui/jquery-ui.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $('#jqui button').button().click(function (e) {
+                alert("jQuery UI Button was clicked");
+            });
+        });
+
+        angular.module('donXample', ['ngRoute'])
+                .config(function ($routeProvider) {
+                    $routeProvider
+                            .when('/beginning', {
+                                templateUrl: '/views/beginning.html'
+                            })
+                            .when('/training', {
+                                templateUrl: '/views/training.html'
+                            })
+                            .when('/removedargument', {
+                                templateUrl: '/views/removedArgument.html'
+                            })
+                            .when('/updatescope', {
+                                templateUrl: '/views/updateScope.html'
+                            })
+                            .when('/monolithicctrl', {
+                                templateUrl: '/views/monolithicCtrl.html'
+                            })
+                            .when('/reusingcontroller', {
+                                templateUrl: '/views/reusingController.html'
+                            })
+                            .when('/rootscopectrlinteraction', {
+                                templateUrl: '/views/rootscopeCtrlInteraction.html'
+                            })
+                            .when('/controllerinheritance', {
+                                templateUrl: '/views/controllerInheritance.html'
+                            })
+                            .when('/solvedcontrollerinheritance', {
+                                templateUrl: '/views/solvedControllerInheritance.html'
+                            })
+                            .when('/multipledistinctctrls',{
+                                templateUrl:'/views/multipleDistinctCtrls.html'
+                            })
+                            .when('/scopelesssimplectrl',{
+                                templateUrl:'/views/scopeLessSimpleController.html'
+                            })
+                            .when('/definingjquerybutton',{
+                                templateUrl:'/views/definingjquerybutton.html'
+                            })
+                            .when('/definingjquerybuttonctrl',{
+                                templateUrl:'/views/definingJqueryButton.html'
+                            })
+                            .when('/integratingjquerywangular',{
+                                templateUrl:'/views/integratingJqueryWAngularCtrl.html'
+                            })
+                            .otherwise({
+                                templateUrl: '/views/start.html'
+                            });
+                })
+    </script>
+    <script src="controllers/simpleCtrl.js"></script>
+    <script src="controllers/removedArgumentCtrl.js"></script>
+    <script src="controllers/updateScopeCtrl.js"></script>
+    <script src="controllers/monolithicCtrl.js"></script>
+    <script src="controllers/rootscopeCtrl.js"></script>
+    <script src="controllers/controllerInheritance.js"></script>
+    <script src="controllers/solvedControllerInheritance.js"></script>
+    <script src="controllers/multipleDistinctCtrls.js"></script>
+    <script src="controllers/scopeLessSimpleCtrl.js"></script>
+    <script src="controllers/definingJqueryButtonCtrl.js"></script>
+    <script src="controllers/integratingJqueryWAngularCtrl.js"></script>
+
+</head>
+<body>
+<h1>Chapter13 - Controllers & Scopes</h1>
+
+<div ng-view=""></div>
+</body>
+</html>
+
+<!--
+weiter mit 326 13-5-->

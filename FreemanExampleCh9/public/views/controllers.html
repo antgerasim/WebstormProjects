@@ -1,0 +1,72 @@
+<!--<script>
+    (function () {
+        'use strict';
+
+        angular
+                .module('donExampleApp')
+                .controller('dayCtrl', dayCtrl);
+
+        //ControllerName.$inject = ['dependency'];
+
+        /* @ngInject */
+        function dayCtrl() {
+            var vm = this;
+            vm.title = 'ControllerName';
+            vm.day;
+            activate();
+
+            ////////////////
+
+            function activate() {
+                var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday",
+                    "Thursday", "Friday", "Saturday"];
+                vm.day = dayNames[new Date().getDay()];
+            }
+        }
+
+    })();
+
+    (function () {
+        'use strict';
+
+        angular
+                .module('donExampleApp')
+                .controller('tomorrowCtrl', tomorrowCtrl);
+
+        //dayCtrl.$inject = ['dependency'];
+
+        /* @ngInject */
+        function tomorrowCtrl() {
+            var vm = this;
+            vm.title = 'tomorrowCtrl';
+            vm.day;
+
+            activate();
+
+            ////////////////
+
+            function activate() {
+                var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday",
+                    "Thursday", "Friday", "Saturday"];
+                vm.day = dayNames[new Date().getDay() + 1 % 7];
+            }
+        }
+
+    })();
+
+</script>-->
+
+
+<div class="panel"> <!--this div to which the ctrl in applied is the view-->
+    <div class="page-header">
+        <h3>Im a controller</h3>
+    </div>
+    <h4 ng-controller="dayCtrl as dc">Today is {{dc.day || "(unknown)"}}</h4>
+    <h4 ng-controller="tomorrowCtrl as tc">Tomorrow is {{tc.day|| "(donknown)"}}</h4>
+</div>
+
+<!--
+I call the angular.module method and get a Module object as the result, on which I immediately call the
+controller method to set up the dayCtrl controller. The result from the controller method is the same Module
+object that I got when I called the angular.module method, so I can use it again to call the controller method
+to set up tomorrowCtrl.-->

@@ -1,0 +1,11 @@
+<div class="panel">
+    <div class="page-header">
+        <h3>Filters</h3>
+    </div>
+    <h4 ng-controller="dayCtrl as dc" highlight="Monday">
+        Today is {{dc.day || "(unknown)" | dayName}}
+    </h4>
+    <h4 ng-controller="tomorrowCtrl as tc" highlight2="Tuesday">
+        Tomorrow is {{tc.day|| "(donknown)" | dayName}}
+    </h4>
+</div>

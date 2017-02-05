@@ -1,0 +1,49 @@
+<h2>The Contents of the compileFn.html File</h2>
+
+<div ng-controller="compileFnCtrl" class="panel panel-body">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr simple-repeater source="products" item-name="item">
+            <td>{{item.name}}</td>
+            <td>{{item.price | currency}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-default text" ng-click="changeData()">Change</button>
+</div>
+
+<p>The first thing I do in the link function is set up a watcher on the scope for the data.length property so that I can
+    respond when the number of data item changes. I use the $watch method, which I described in Chapter 13. (I don’t
+    have to worry about the individual properties of the data objects since they will be data bound in the transcluded
+    template.)</p>
+
+<p>Within the watcher function I use jqLite to locate the parent of the element to which the directive has been
+    applied and then remove its children. I have to work with the parent element because I set the transclude property
+    to
+    element, which means that I want to add and remove copies of the directive’s element.</p>
+
+<p>The next step is to enumerate the data objects. I create a new scope by calling the $scope.$new method.
+    This allows me to assign a different object to the item property for each instance of the transcluded content, which
+    I clone like this:</p>
+
+<p>transcludeFn(childScope, function (clone) {
+    parent.append(clone);
+    });</p>
+<p>This is the most important part of the example. For each data object, I call the transclude function that is passed
+    to the compile function. The first argument is the child scope that contains the item property set to the current
+    data
+    item. The second argument is a function that is passed a cloned set of the transcluded content, which I append to
+    the
+    parent element using jqLite. The result is that I generate a copy of the tr element that my directive has been
+    applied
+    to—and its contents—for each data object and create a new scope that allows the transcluded content to refer to the
+    current data object as item.
+    So that I can test that the directive responds to changes in the data, I added a Change button that calls the
+    changeData behavior in the controller. This behavior adds a new item to the data array and increments the value of
+    the price property</p>

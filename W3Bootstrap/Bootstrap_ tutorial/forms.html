@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <title>Bootstrap Forms</title>
+</head>
+<body>
+<div class="container">
+    <h1>Bootstrap Forms</h1>
+    <h2>Bootstrap's Default Settings</h2>
+    <p>Form controls automatically receive some global styling with Bootstrap: All textual <code>&lt;input&gt;</code>,
+        <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements with class <code>.form-control</code>
+        have a width of 100%.</p>
+    <hr>
+    <h2>Bootstrap Form Layouts</h2>
+    <div>
+        <p>Bootstrap provides three types of form layouts:</p>
+        <ul>
+            <li>Vertical form (this is default)</li>
+            <li>Horizontal form</li>
+            <li>Inline form</li>
+        </ul>
+        <p>Standard rules for all three form layouts:</p>
+        <ul>
+            <li>Wrap labels and form controls in <code>&lt;div class="form-group"&gt;</code> (needed for optimum
+                spacing)
+            </li>
+            <li>Add class .form-control to all textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and
+                <code>&lt;select&gt;</code> elements
+            </li>
+        </ul>
+    </div>
+    <h2>Bootstrap Vertical Form (default)</h2>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <form>
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd">
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox"> Remember me!</label>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </div>
+    <hr>
+    <h2>Bootstrap Inline Form</h2>
+    <p>In an inline form, all of the elements are inline, left-aligned, and the labels are alongside.</p>
+    <p class="don-note"><strong>Note:</strong> This only applies to forms within viewports that are at least 768px wide!
+        Additional rule for an inline form:</p>
+    <p>
+    <ul>
+        <li>Add class <code>.form-inline</code> to the <code>&lt;form&gt;</code> element</li>
+    </ul>
+    </p>
+    <p>The following example creates an inline form with two input fields, one checkbox, and one submit button:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="email2">Email address:</label>
+                    <input type="email" class="form-control" id="email2">
+                </div>
+                <div class="form-group">
+                    <label for="pwd2">Password:</label>
+                    <input type="password" class="form-control" id="pwd2">
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox"> Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="don-note">
+        <strong>Tip:</strong> If you don't include a label for every input, screen readers will have trouble with your
+        forms. You can hide the labels for all devices, except screen readers, by using the <code>.sr-only</code> class:
+    </div>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="email3" class="sr-only">Email address:</label>
+                    <input type="email" class="form-control" id="email3">
+                </div>
+                <div class="form-group">
+                    <label for="pwd3" class="sr-only">Password:</label>
+                    <input type="password" class="form-control" id="pwd3">
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox"> Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </div>
+    <hr>
+    <h2>Bootstrap Horizontal Form</h2>
+    <p>A horizontal form stands apart from the other forms both in the amount of markup, and in the presentation of the
+        form. Additional rules for a horizontal form:
+        <br>
+    <ul>
+        <li>Add class <code>.form-horizontal</code> to the <code>&lt;form&gt;</code> element</li>
+        <li>Add class <code>.control-label</code> to all <code>&lt;label&gt;</code> elements</li>
+    </ul>
+    </p>
+    <div class="don-note">
+        <strong>Tip:</strong> Use Bootstrap's predefined grid classes to align labels and groups of form controls in a
+        horizontal layout.
+    </div>
+    <p>The following example creates a horizontal form with two input fields, one checkbox, and one submit button:</p>
+    <div class="panel well">
+        <div class="panel-heading"><strong>Example</strong></div>
+        <div class="panel-body">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="email4" class="control-label col-sm-2">Email:</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="email4" placeholder="Enter email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pwd4" class="control-label col-sm-2">Password:</label>
+                    <div class="col-sm-10">
+                        <input type="password" id="pwd4" class="form-control" placeholder="Enter password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class=" col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    </p></div>
+</body>
+</html>

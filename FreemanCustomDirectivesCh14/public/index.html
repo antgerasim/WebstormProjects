@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="donXample">
+<head>
+    <title>Chapter14 - Creating Custom Directives</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script>
+        (function () {
+            'use strict';
+
+            angular
+                    .module('donXample', [
+                        'ngRoute'
+                    ])
+                    .config(function ($routeProvider) {
+                        $routeProvider
+                                .when(
+                                        '/beginning', {
+                                            templateUrl: '/views/beginning.html'
+                                        }
+                                )
+                                .when('/training', {
+                                            templateUrl: '/views/training.html'
+                                        }
+                                )
+                                .when('/supportfordirectiveattr', {
+                                    templateUrl: '/views/supportForDirectiveAttr.html'
+                                })
+                                .when('/evaluatingexpressions', {
+                                    templateUrl: '/views/evaluatingExpressions.html'
+                                })
+                                .when('/changevaluesdir', {
+                                    templateUrl: '/views/changeValuesDir.html'
+                                })
+                                .when('/jqlite', {
+                                    templateUrl: 'views/jqlite.html'
+                                })
+                                .when('/addelements', {
+                                    templateUrl: 'views/addElements.html'
+                                })
+                                .when('/jqliteget', {
+                                    templateUrl: 'views/jqLiteGet.html'
+                                })
+                                .when('/jqlitelistelemens', {
+                                    templateUrl: 'views/jqliteListElemens.html'
+                                })
+                                .when('/fixingjqliteproblem', {
+                                    templateUrl: 'views/fixingJqliteProblem.html'
+                                })
+                                .when('/jqliteeventhandler', {
+                                    templateUrl: 'views/jqliteEventHandler.html'
+                                })
+                                .otherwise({
+                                    templateUrl: '/views/start.html'
+                                })
+
+                    });
+
+        })();
+    </script>
+    <script src="controllers/defaultCtrl.js"></script>
+    <script src="directives/unorderedList.js"></script>
+    <script src="directives/supportForDirectiveAttr.js"></script>
+    <script src="directives/evaluatingExpressions.js"></script>
+    <script src="controllers/changeValuesCtrl.js"></script>
+    <script src="directives/changeValuesDir.js"></script>
+    <script src="directives/jqliteDir.js"></script>
+    <script src="controllers/jqliteCtrl.js"></script>
+    <script src="directives/demoDirectiveFind.js"></script>
+    <script src="directives/jqLiteGet.js"></script>
+    <script src="controllers/jqliteListElemensCtrl.js"></script>
+    <script src="directives/jqliteListElemensDir.js"></script>
+    <script src="directives/fixingJqliteProblemDir.js"></script>
+    <script src="directives/jqliteEventHandlerDir.js"></script>
+
+</head>
+<body>
+
+<h1>Chapter14 - Creating Custom Directives</h1>
+
+<div ng-view></div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Dropdown Menu Example</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!--into body?-->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12,
+        .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12,
+        .col-sm-1 {
+            background-color: #00b3ee;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+<div class="form-group has-success has-feedback">
+    <label class="control-label" for="inputSucces2">Input with success</label>
+    <input type="text" class="form-control" id="inputSucces2">
+    <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+    <span id="inputSuccess2Status" class="sr-only">(success)</span>
+</div>
+<div class="form-group has-warning has-feedback">
+    <label for="inputWarning2" class="control-label">Input with warning</label>
+    <input type="text" id="inputWarning2" class="form-control">
+    <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+    <span id="inputWarning2Status" class="sr-only">(warning)</span>
+</div>
+<div class="form-group has-error has-feedback">
+    <label for="inputError2" class="control-label">Input with errors</label>
+    <input type="text" class="form-control" id="inputError2">
+    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+    <span id="inputError2Status" class="sr-only">(error)</span>
+</div>
+<div class="form-group has-error has-success has-feedback">
+    <label for="inputGroupSuccess1" class="control-label">Input group with success</label>
+    <div class="input-group">
+        <span class="input-group-addon">@</span>
+        <input type="text" id="inputGroupSuccess1" class="form-control">
+    </div>
+    <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+    <span id="inputGroupSuccess1Status" class="sr-only">(succes)</span>
+</div>
+</body>
+</html>

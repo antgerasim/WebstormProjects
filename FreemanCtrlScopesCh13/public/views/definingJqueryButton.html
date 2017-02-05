@@ -1,0 +1,36 @@
+<!--<script>
+    $(document).ready(function () {
+        $('#jqui button').button().click(function (e) {
+            alert("jQuery UI Button was clicked");
+        });
+    });
+
+    var app = angular.module("exampleApp", [])
+            .controller("simpleCtrl", function ($scope) {
+                $scope.buttonEnabled = true;
+                $scope.clickCounter = 0;
+                $scope.handleClick = function () {
+                    $scope.clickCounter++;
+                }
+            });
+</script>-->
+
+<div>
+    <div id="angularRegion" class="well" ng-controller="defineJqueryCtrl">
+        <h4>AngularJS</h4>
+
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" ng-model="buttonEnabled"> Enable Button
+            </label>
+        </div>
+        Click counter: {{clickCounter}}
+    </div>
+    <div id="jqui" class="well">
+        <h4>jQuery UI</h4>
+        <button>Click Me!</button>
+    </div>
+</div>
+
+<!--
+weiter mit 345-->

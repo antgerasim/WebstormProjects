@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="donXampleApp">
+<head>
+    <title>Directives<</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script>
+        angular
+                .module('donXampleApp', ['ngRoute'])
+                .config(function ($routeProvider) {
+                    $routeProvider
+                            .when('/elementsrepeatedly', {
+                                templateUrl: '/views/elementsRepeatedly.html'
+                            })
+                            .when('/repeatingobjprops', {
+                                templateUrl: '/views/repeatingObjProps.html'
+                            })
+                            .when('/workingwdataobjectkeys', {
+                                templateUrl: '/views/workingWDataObjectKeys.html'
+                            })
+                            .when('/workingwbuiltinvars', {
+                                templateUrl: '/views/workingWBuiltInVars.html'
+                            })
+                            .when('/builtinngrepeatvarsoddeven', {
+                                templateUrl: '/views/builtInNgRepeatVarsOddEven.html'
+                            })
+                            .when('/builtinngrepeatvarsfirstlast', {
+                                templateUrl: '/views/builtinngRepeatvarsfirstlast.html'
+                            })
+                            .when('/repeatingmulttoplevelelems', {
+                                templateUrl: '/views/repeatingMultTopLevelElems.html'
+                            })
+                            .when('/workingwithpartialviews', {
+                                templateUrl: '/views/workingWithPartialViews.html'
+                            })
+                            .when('/selectingpartialviewsdynamically', {
+                                templateUrl: '/views/selectingPartialViewsDynamically.html'
+                            })
+                            .when('/selectingpartialviewsdynamicallywithoptions', {
+                                templateUrl: '/views/selectingPartialViewsDynamicallyWithOptions.html'
+                            })
+                            .when('/conditionallyswappingelements', {
+                                templateUrl: '/views/сonditionallySwappingElements.html'
+                            })
+                            .when('/training',{
+                                templateUrl:'/views/training.html'
+                            })
+                            .otherwise({
+                                templateUrl: '/views/start.html'
+                            });
+                });
+    </script>
+    <script src="controller/defaultCtrl.js"></script>
+    <style>
+    </style>
+</head>
+<body class="container">
+
+<div ng-view></div>
+
+</body>
+</html>
+
+<!--
+weiter mit 253-->

@@ -1,0 +1,26 @@
+<h2>Creating a New Scope for Each Instance of a Directive in the .html File</h2>
+<div ng-controller="scopeCtrl">
+    <div class="panel panel-default">
+        <div class="panel-body" scope-demo2></div>
+        <div class="panel-body" scope-demo2></div>
+    </div>
+</div>
+
+<div class="panel well">
+    <div class="panel-body">
+        <p>Setting the scope property true allows me to reuse the directive within the same controller, and that means I
+            am
+            able to remove the second controller and simplify the application. The simplification isn’t enormously
+            significant in a
+            simple example like this one, but large projects are complex enough without having to create endless
+            controllers just
+            to stop your directives from sharing data values.
+            The scopes that are created when the scope property is set to true are part of the regular scope hierarchy
+            that
+            I described in Chapter 13. This means the rules I described about inheritance of objects and properties
+            apply, giving
+            you flexibility about how you set up the data used—and potentially shared—by instances of a custom
+            directive</p>
+    </div>
+</div>
+weiter mit ed documentation from p.429

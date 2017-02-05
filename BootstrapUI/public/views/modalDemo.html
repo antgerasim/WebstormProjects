@@ -1,0 +1,45 @@
+<h2>Angular-UI Orig. Modal Demo</h2>
+
+<div ng-controller="modalDemoCtrl as c">
+    <!--    $uibModal.open({ templateUrl: 'donModalContent.html'}) == id="donModalContent.html"-->
+    <!--$instc = scope in modalDemoInstanceCtrl-->
+    <script type="text/ng-template" id="donModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">I'm a modal!</h3>
+        </div>
+        <div class="modal-body">
+            <ul>
+                <li ng-repeat="item in $instc.items">
+                    <a href="#" ng-click="$event.preventDefault(); $instc.selected.item = item">{{ item }}</a>
+                </li>
+            </ul>
+            Selected: <b>{{ $instc.selected.item }}</b>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="$instc.ok()">OK</button>
+            <button class="btn btn-warning" type="button" ng-click="$instc.cancel()">Cancel</button>
+        </div>
+    </script>
+
+    <button type="button" ng-click="c.open()">Open Modal</button>
+    <button type="button" ng-click="c.open('lg')">Large Modal</button>
+    <button type="button" ng-click="c.open('sm')">Small Modal</button>
+    <br>
+    <br>
+    <div>
+        <button type="button" ng-click="c.toggleAnimation()">Toggle Animation</button>
+    </div>
+    <br>
+    <p>Animation enabled: <strong>{{c.animationsEnabled}}</strong></p>
+    <p>Selected item: <strong>{{c.selected.item}}</strong></p>
+    <p>This is the original Angular-UI Bootstrap modal <a href="https://angular-ui.github.io/bootstrap/">example</a>
+        adopted to WebStorm
+    <p>ControllerAs syntax was modified from $ctrl to $instc to reflect the scope of the instance controller.</p>
+    <p>Main controller properties are getting injected into modal scope via '<a
+            href="http://brianhann.com/pass-data-to-a-ui-bootstrap-modal-without-scope/">Resolve</a>' without using
+        $scope explicitly.</p>
+    <p>$modal has been <a href="https://github.com/olov/ng-annotate/issues/200">renamed</a> to $uibModal in ui-bootstrap
+        0.14.0.</p>
+</div>
+
+

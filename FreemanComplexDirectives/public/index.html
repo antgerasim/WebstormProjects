@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="donXample">
+<head>
+    <title>Chapter14 - Creating Custom Directives</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script>
+        (function () {
+            'use strict';
+
+            angular
+                    .module('donXample', [
+                        'ngRoute'
+                    ])
+                    .config(function ($routeProvider) {
+                        $routeProvider
+                                .when('/beginning', {
+                                    templateUrl: '/views/beginning.html'
+                                })
+                                .when('/training', {
+                                    templateUrl: '/views/training.html'
+                                })
+                                .when('/template', {
+                                    templateUrl: '/views/template.html'
+                                })
+                                .when('/templatesep', {
+                                    templateUrl: '/views/templateSep.html'
+                                })
+                                .when('/templatesepfile', {
+                                    templateUrl: '/views/templateSepFile.html'
+                                })
+                                .when('/templatesepfilefx', {
+                                    templateUrl: '/views/templateSepFileFx.html'
+                                    /*   templateUrl:'/views/directiveScopes.html'*/
+                                })
+                                .when('/directivescopes', {
+                                    templateUrl: '/views/directiveScopes.html'
+                                })
+                                .when('/secondctrldirectivescopes', {
+                                    templateUrl: '/views/secondCtrlDirectiveScopes.html'
+                                })
+                                .when('/newscopeeachinstance', {
+                                    templateUrl: '/views/newScopeEachInstance.html'
+                                })
+                                .when('/expandingdirectivescopes', {
+                                    templateUrl: '/views/expandingDirectiveScopes.html'
+                                })
+                                .when('/onewaybindingisoscope', {
+                                    templateUrl: '/views/oneWayBindingIsoScope.html'
+                                })
+                                .when('/onewaybindingisoscopereuse', {
+                                    templateUrl: '/views/oneWayBindingIsoScopeReUse.html'
+                                })
+                                .when('/twowaybindingisoscope', {
+                                    templateUrl: '/views/twoWayBindingIsoScope.html'
+                                })
+                                .when('/evaltwowaybindingisoscope', {
+                                    templateUrl: '/views/evalTwoWayBindingIsoScope.html'
+                                })
+                                .when('/evaltwowaybindingisoscopeexpr', {
+                                    templateUrl: '/views/evalTwoWayBindingIsoScopeExpr.html'
+                                })
+                                .otherwise({
+                                    templateUrl: '/views/start.html'
+                                })
+                    });
+
+        })();
+    </script>
+    <script src="javascripts/directives/defaultDir.js"></script>
+    <script src="javascripts/directives/restrictDir.js"></script>
+    <script src="javascripts/controllers/defaultCtrl.js"></script>
+    <script src="javascripts/directives/templateDir.js"></script>
+    <script src="javascripts/directives/templateSepDir.js"></script>
+    <script src="javascripts/directives/templateSepFileDir.js"></script>
+    <script src="javascripts/directives/templateSepFileFxDir.js"></script>
+    <script src="javascripts/directives/directiveScopesDir.js"></script>
+    <script src="javascripts/controllers/scopeCtrl.js"></script>
+    <script src="javascripts/controllers/secondCtrl.js"></script>
+    <script src="javascripts/directives/newScopeEachInstanceDir.js"></script>
+    <script src="javascripts/directives/expandingDirectiveScopesDir.js"></script>
+    <script src="javascripts/controllers/thirdCtrl.js"></script>
+    <script src="javascripts/controllers/secondCtrl.js"></script>
+    <script src="javascripts/directives/oneWayBindingIsoScopeDir.js"></script>
+    <script src="javascripts/directives/twoWayBindingIsoScopeDir.js"></script>
+    <script src="javascripts/controllers/evalCtrl.js"></script>
+    <script src="javascripts/directives/evalTwoWayBindingIsoScopeDir.js"></script>
+
+
+</head>
+<body>
+
+<h1>Chapter16 - Creating Complex Directives</h1>
+
+<div ng-view></div>
+
+</body>
+</html>
+
+<!--//weiter mit 442 Evaluating Expressions-->

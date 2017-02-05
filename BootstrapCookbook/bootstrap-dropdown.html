@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Dropdown Menu Example</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!--into body?-->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12,
+        .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+            background-color: #00b3ee;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="col-md-1">.col-md-1</div>
+<div class="col-md-1">.col-md-1</div>
+<div class="col-md-1">.col-md-1</div>
+<div class="col-md-1">.col-md-1</div>
+<div class="col-md-1">.col-md-1</div>
+<div class="col-md-1">.col-md-1</div>
+
+<div class="col-xs-2">
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="true">
+            Dropdown
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">Action</a></li>
+            <li class="dropdown-header">Dropdown header</li>
+            <li><a href="#">Action2</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Action3</a></li>
+            <li class="disabled"><a href="#">Disabled link</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="col-xs-2">
+    <div class="dropup">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="true">
+            Dropdown
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <li><a href="#">Action</a></li>
+            <li class="dropdown-header">Dropdown header</li>
+            <li><a href="#">Action2</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Action3</a></li>
+            <li class="disabled"><a href="#">Disabled link</a></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<script type="text/ng-template" id="donTemplate">
+    <div class="well">
+        <div class="btn-group">
+            <button class="btn btn-default">Yes</button>
+            <button class="btn btn-default">No</button>
+            <button class="btn btn-default">Not Sure</button>
+        </div>
+    </div>
+</script>
+
+<h2>Training</h2>
+<div ng-controller="defaultCtrl2">
+    <div>
+        <training-dir ng-model='dataValue'></training-dir>
+    </div>
+    <div class="well">
+        Value:
+        <select ng-model="dataValue">
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+        </select>
+    </div>
+</div>
+
+<p>Now, when you click on one of the button, the select box will change its value</p>

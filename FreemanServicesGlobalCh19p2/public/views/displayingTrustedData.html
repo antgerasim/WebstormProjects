@@ -1,0 +1,18 @@
+<h2>Listing 19-15. Displaying Trusted Data in the htmlData.html File</h2>
+<div ng-controller="defaultCtrl1 as c">
+    <div class="well">
+        <p><input class="form-control" ng-model="c.htmlData"/></p>
+
+        <p ng-bind-html="c.htmlData"></p>
+    </div>
+</div>
+
+<p>Although the content is displayed at HTML, the onmouseover event handler that I applied to the b element
+    doesn’t work, and that’s because there is a second security measure in place that strips out dangerous elements and
+    attributes from HTML strings. Here is what the htmlData value has been transformed into:</p>
+
+<p>&lt;p&gt;This is &lt;b&gt;dangerous&lt;/b&gt; data&lt;/p&gt;</p>
+
+<p>This process removes script and css elements, inline JavaScript event handlers and style attributes, and
+    anything else that might cause problems. The process is known as sanitization and is provided by the $sanitize
+    service in the ngSanitize module. The $sanitize service is used automatically by the ng-bind-html directive</p>

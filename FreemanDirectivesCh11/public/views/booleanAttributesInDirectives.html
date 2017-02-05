@@ -1,0 +1,18 @@
+<div id="todoPanel" class="panel" ng-controller="directiveCtrl as dirC">
+    <h3 class="panel-header">To Do List</h3>
+
+    <div class="checkbox well">
+        <label>
+            <input type="checkbox" ng-model="dirC.dataValue">
+            Set the Data Value
+        </label>
+    </div>
+  <!--  <button class="btn" disabled="disabled">My Button</button> this doesnt work-->
+    <button class="btn btn-success" ng-disabled="dirC.dataValue">My Button</button>
+
+</div>
+
+<!--
+I defined a model property called dataValue that I will use to control the state of a button element. The example
+contains a check box that uses the ng-model directive to create a two-way data binding with the dataValue property
+(as described in Chapter 10), and I have applied the ng-disabled directive to the button element.-->

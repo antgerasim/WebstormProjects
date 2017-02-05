@@ -1,0 +1,33 @@
+<div id="todoPanel" class="panel" ng-controller="formsCrl as fc">
+    <form name="donForm" novalidate ng-submit="fc.addUser(newUser)">
+        <div class="well">
+            <div class="form-group">
+                <label>Name:</label>
+                <input type="text" name="text" class="form-control" required ng-model="newUser.name">
+            </div>
+            <div class="form-group">
+                <label>EmailL</label>
+                <input type="email" name="userMail" ng-model="newUser.email">
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="agreed" ng-model="newUser.agreed" required>
+                    I agree to the terms and conditions
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" ng-disabled="donForm.$invalid">
+                OK
+            </button>
+        </div>
+        <div class="well">
+            Message:{{fc.message}}
+            <div>
+                Valid:
+                <span class="summery" ng-class="donForm.$valid? 'ng-valid':'ng-invlid'">
+                    {{donForm.$valid}}
+                </span>
+            </div>
+        </div>
+    </form>
+
+</div>

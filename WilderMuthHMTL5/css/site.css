@@ -1,0 +1,51 @@
+header, footer{
+    background-color: lightgrey;
+    border: solid 1px black;
+    font-family: 'Times New Roman', serif;/*Duplicate with Body! The more specific take precedence*/
+}
+footer{
+    padding: 10px;
+    border-radius:3px;
+}
+
+body{
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.bordered-image {
+    border: solid 1px #444;
+    border-radius: 2px ;
+}
+
+#main {
+    border: solid 1px #ccc; /*ccc hexadecimal for grey*/
+    border-radius: 5px;
+    color: #202020;
+    margin: 20px 0px 20px 0px; /*margin for top, right, bottom, left*/
+    padding: 50px;
+}
+
+.simple-form{
+    padding: 2px;
+}
+
+.simple-form label { /*label lives somewhere inside the main element*/
+    font-weight: bold;
+
+}
+
+.simple-form input[type=text],
+.simple-form select,
+.simple-form input[type=password],
+.simple-form textarea{
+    width: 150px;
+}
+
+.simple-form input[type=submit] {
+    background-color: green;
+    color: white;
+    border-radius: 15px;
+    padding: 3px;
+    margin-top: 5px;
+}

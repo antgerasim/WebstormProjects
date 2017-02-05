@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Offsetting and Nesting Columns</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<style type="text/css">
+.col-md-3, .col-md-4,.col-md-2, .col-md-6, .col-md-7, .col-md-offset-2{
+    background-color: #00b3ee;
+    color: white;
+    border: 1px solid white;
+    line-height: 3em;
+}
+</style>
+</body>
+<div class="container">
+<div class="row">
+    <div class="col-md-2">Test</div>
+    <div class="col-md-4">Test</div>
+    <div class="col-md-6">Test</div>
+    <div class="col-md-7">Test</div>
+    <div class="col-md-3">Test</div>
+</div>
+    <div class="row">
+        <div class="span12">span12</div>
+<!--        convert this to zen code-->
+        <div class="reply">
+            <div class="created pull-right">Feb 28, 2013</div>
+            <div class="content">Lorem ipsum dolor sit amet.</div>
+        </div>
+(.reply>(.created.pull-right>{content1})+.content>lorem5)*5
+
+    </div>
+</div>
+</html>
+
