@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="donApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Tutorialspoint</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script>
+        angular
+            .module('donApp', ['ngRoute'])
+            .config(function ($locationProvider, $routeProvider) {
+
+                $locationProvider
+        /*            .html5Mode(false)*/
+                    .hashPrefix('!');
+
+                $routeProvider
+                    .when('/training', {
+                        templateUrl: '/views/training.html'
+                    })
+                    .when('/beginning', {
+                        templateUrl: '/views/beginning.html'
+                    })
+                    .otherwise({
+                        templateUrl: '/views/start.html'
+                    });
+            });
+
+    </script>
+</head>
+<body class="container">
+
+<div ng-view></div>
+
+</body>
+</html>
